@@ -1,7 +1,7 @@
 services:
   # Backend Express API Service
   - type: web
-    name: alasr-dms-backend
+    name: executive-cars-dms-backend
     env: node
     rootDir: backend
     buildCommand: npm install && npx prisma generate
@@ -14,7 +14,7 @@ services:
 
   # Frontend React Static Web Site
   - type: web
-    name: alasr-dms-frontend
+    name: executive-cars-dms-frontend
     env: static
     rootDir: frontend
     buildCommand: npm install && npm run build
