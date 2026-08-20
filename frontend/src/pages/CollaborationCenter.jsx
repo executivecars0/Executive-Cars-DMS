@@ -114,11 +114,11 @@ export default function CollaborationCenter() {
     <div className="p-4 sm:p-8 space-y-6 max-w-7xl mx-auto">
       {/* Header Banner */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-card p-6 rounded-3xl border border-white/10 relative overflow-hidden">
-        <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-[#c5a059]/10 rounded-full blur-3xl pointer-events-none"></div>
         
         <div>
           <div className="flex items-center space-x-2">
-            <span className="px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono text-[10px] uppercase font-bold border border-cyan-500/30">
+            <span className="px-2.5 py-1 rounded-lg bg-[#c5a059]/20 text-[#c5a059] font-mono text-[10px] uppercase font-bold border border-[#c5a059]/30">
               50-50 Split Hub
             </span>
             {isAdmin && (
@@ -135,7 +135,7 @@ export default function CollaborationCenter() {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-5 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-2xl text-xs shadow-xl shadow-cyan-500/20 transition-all flex items-center justify-center space-x-2 self-start md:self-auto"
+          className="px-5 py-3 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold rounded-2xl text-xs shadow-xl shadow-[#c5a059]/20 transition-all flex items-center justify-center space-x-2 self-start md:self-auto"
         >
           <Plus className="w-4 h-4" />
           <span>New 50-50 Collaboration</span>
@@ -149,7 +149,7 @@ export default function CollaborationCenter() {
             <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400">Total Joint Deals</p>
             <h3 className="text-2xl font-extrabold text-white mt-1">{stats.totalCollaborations || 0}</h3>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/20 flex items-center justify-center">
             <Handshake className="w-5 h-5" />
           </div>
         </div>
@@ -184,7 +184,7 @@ export default function CollaborationCenter() {
             placeholder="Search agent name or vehicle..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 font-mono"
+            className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#c5a059] font-mono"
           />
         </div>
 
@@ -195,7 +195,7 @@ export default function CollaborationCenter() {
               onClick={() => setStatusFilter(st)}
               className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all ${
                 statusFilter === st
-                  ? 'bg-cyan-500 text-black font-bold shadow-lg shadow-cyan-500/20'
+                  ? 'bg-[#c5a059] text-black font-bold shadow-lg shadow-[#c5a059]/20'
                   : 'bg-slate-900/80 text-slate-400 hover:text-white border border-white/10'
               }`}
             >
@@ -213,11 +213,11 @@ export default function CollaborationCenter() {
           const priceValue = collab.seller ? collab.seller.demandPrice : collab.buyer?.budget;
 
           return (
-            <div key={collab.id} className="glass-card p-5 rounded-2xl border border-white/10 space-y-4 hover:border-cyan-500/30 transition-all">
+            <div key={collab.id} className="glass-card p-5 rounded-2xl border border-white/10 space-y-4 hover:border-[#c5a059]/30 transition-all">
               {/* Card Header: Agents Pair & Status */}
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
                 <div className="flex items-center space-x-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 font-mono text-[10px] font-bold border border-cyan-500/30">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#c5a059]/20 text-[#c5a059] font-mono text-[10px] font-bold border border-[#c5a059]/30">
                     50-50 Split
                   </span>
                   <span className="text-xs font-mono text-slate-400">{leadKind}</span>
@@ -249,7 +249,7 @@ export default function CollaborationCenter() {
               {/* Partner Agents Visual Connection */}
               <div className="flex items-center justify-between bg-slate-900/60 p-3 rounded-xl border border-white/5 font-mono text-xs">
                 <div className="flex items-center space-x-2">
-                  <div className="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs">
+                  <div className="w-7 h-7 rounded-lg bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center font-bold text-xs">
                     {collab.primarySalesman?.name?.charAt(0) || 'P'}
                   </div>
                   <div>
@@ -258,7 +258,7 @@ export default function CollaborationCenter() {
                   </div>
                 </div>
 
-                <div className="flex items-center text-cyan-400 font-bold space-x-1">
+                <div className="flex items-center text-[#c5a059] font-bold space-x-1">
                   <Handshake className="w-4 h-4" />
                   <ArrowRight className="w-3 h-3" />
                 </div>
@@ -279,7 +279,7 @@ export default function CollaborationCenter() {
                 <div className="space-y-1">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-bold text-white flex items-center space-x-1.5">
-                      <Car className="w-4 h-4 text-cyan-400" />
+                      <Car className="w-4 h-4 text-[#c5a059]" />
                       <span>{leadObj.vehicle} {leadObj.model} ({leadObj.year})</span>
                     </p>
                     <p className="text-xs font-mono font-extrabold text-emerald-400">
@@ -294,7 +294,7 @@ export default function CollaborationCenter() {
 
               {collab.notes && (
                 <p className="text-xs text-slate-400 bg-slate-900/40 p-2.5 rounded-xl font-mono text-[11px] border border-white/5">
-                  <MessageSquare className="w-3 h-3 text-cyan-400 inline mr-1.5" />
+                  <MessageSquare className="w-3 h-3 text-[#c5a059] inline mr-1.5" />
                   {collab.notes}
                 </p>
               )}
@@ -328,7 +328,7 @@ export default function CollaborationCenter() {
                     onClick={() => { setLeadType('seller'); setFormData({ ...formData, buyerId: '' }); }}
                     className={`py-2 px-3 rounded-xl font-mono text-xs transition-all ${
                       leadType === 'seller'
-                        ? 'bg-cyan-500 text-black font-bold'
+                        ? 'bg-[#c5a059] text-black font-bold'
                         : 'bg-slate-900 border border-white/10 text-slate-400'
                     }`}
                   >
@@ -340,7 +340,7 @@ export default function CollaborationCenter() {
                     onClick={() => { setLeadType('buyer'); setFormData({ ...formData, sellerId: '' }); }}
                     className={`py-2 px-3 rounded-xl font-mono text-xs transition-all ${
                       leadType === 'buyer'
-                        ? 'bg-cyan-500 text-black font-bold'
+                        ? 'bg-[#c5a059] text-black font-bold'
                         : 'bg-slate-900 border border-white/10 text-slate-400'
                     }`}
                   >
@@ -407,7 +407,7 @@ export default function CollaborationCenter() {
               {/* Fixed 50-50 Split Badge */}
               <div className="bg-slate-900/80 p-3 rounded-xl border border-white/10 flex items-center justify-between font-mono text-xs">
                 <span className="text-slate-400">Commission Split Ratio:</span>
-                <span className="text-cyan-400 font-extrabold px-2.5 py-0.5 rounded-md bg-cyan-500/20 border border-cyan-500/30">
+                <span className="text-[#c5a059] font-extrabold px-2.5 py-0.5 rounded-md bg-[#c5a059]/20 border border-[#c5a059]/30">
                   50% / 50% Equal Partner Split
                 </span>
               </div>
@@ -436,7 +436,7 @@ export default function CollaborationCenter() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-cyan-500/20 hover:from-cyan-400 hover:to-blue-500 transition-all disabled:opacity-50"
+                  className="px-5 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-[#c5a059]/20 hover:from-[#dfc18b] hover:to-[#c5a059] transition-all disabled:opacity-50"
                 >
                   {submitting ? 'Creating...' : 'Submit 50-50% Agreement'}
                 </button>

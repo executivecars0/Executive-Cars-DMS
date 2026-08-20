@@ -43,7 +43,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
                 onClick={() => onEdit(buyer)}
                 className="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 rounded-xl text-xs font-mono flex items-center space-x-1.5 transition-colors"
               >
-                <Edit className="w-3.5 h-3.5 text-cyan-400" />
+                <Edit className="w-3.5 h-3.5 text-[#c5a059]" />
                 <span>Edit Inquiry</span>
               </button>
             )}
@@ -63,7 +63,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Buyer Contact Information */}
             <div className="glass-card rounded-2xl p-5 border border-white/10 space-y-3">
-              <h4 className="text-xs uppercase font-mono text-cyan-400 tracking-wider font-bold border-b border-white/5 pb-2">
+              <h4 className="text-xs uppercase font-mono text-[#c5a059] tracking-wider font-bold border-b border-white/5 pb-2">
                 Buyer Contact Details
               </h4>
               <div className="space-y-2 text-xs">
@@ -73,7 +73,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-mono">Phone Number:</span>
-                  <span className="font-mono text-cyan-400 font-bold">{buyer.buyerPhone}</span>
+                  <span className="font-mono text-[#c5a059] font-bold">{buyer.buyerPhone}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-mono">City / Location:</span>
@@ -100,7 +100,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
 
             {/* Vehicle Requirement & Budget */}
             <div className="glass-card rounded-2xl p-5 border border-white/10 space-y-3">
-              <h4 className="text-xs uppercase font-mono text-cyan-400 tracking-wider font-bold border-b border-white/5 pb-2">
+              <h4 className="text-xs uppercase font-mono text-[#c5a059] tracking-wider font-bold border-b border-white/5 pb-2">
                 Inquiry Requirements & Budget
               </h4>
               <div className="space-y-2 text-xs">
@@ -138,7 +138,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
                     </div>
                     <div className="flex justify-between pt-1 border-t border-white/10">
                       <span className="text-slate-300 font-mono font-bold">Calculated Due Loan Balance:</span>
-                      <span className="font-mono font-extrabold text-cyan-300 text-sm">
+                      <span className="font-mono font-extrabold text-[#dfc18b] text-sm">
                         Rs. {(buyer.dueAmount || 0).toLocaleString()}
                       </span>
                     </div>
@@ -154,7 +154,7 @@ export default function BuyerDetailModal({ buyer, onClose, onEdit }) {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-mono">Condition:</span>
-                  <span className="font-mono text-cyan-300 font-semibold">{buyer.carCondition || 'Used'} {buyer.carCondition === 'Zero Meter' ? `(${buyer.zeroMeterType || 'Cash'})` : ''}</span>
+                  <span className="font-mono text-[#dfc18b] font-semibold">{buyer.carCondition || 'Used'} {buyer.carCondition === 'Zero Meter' ? `(${buyer.zeroMeterType || 'Cash'})` : ''}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-mono">Assigned Salesman:</span>

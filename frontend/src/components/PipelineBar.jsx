@@ -1,7 +1,7 @@
 import React from 'react';
 
 const stages = [
-  { key: 'New Lead', label: 'New Lead', color: 'bg-cyan-500', border: 'border-cyan-500' },
+  { key: 'New Lead', label: 'New Lead', color: 'bg-[#c5a059]', border: 'border-[#c5a059]' },
   { key: 'Contacted', label: 'Contacted', color: 'bg-blue-500', border: 'border-blue-500' },
   { key: 'Follow Up', label: 'Follow Up', color: 'bg-amber-500', border: 'border-amber-500' },
   { key: 'Interested', label: 'Interested', color: 'bg-purple-500', border: 'border-purple-500' },
@@ -20,7 +20,7 @@ export default function PipelineBar({ data = {} }) {
           <h4 className="text-lg font-bold text-white tracking-tight">Sales Pipeline Breakdown</h4>
           <p className="text-xs text-slate-400 font-mono mt-0.5">Active leads across stages</p>
         </div>
-        <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-full text-xs font-mono">
+        <span className="px-3 py-1 bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/30 rounded-full text-xs font-mono">
           Total Leads: {total}
         </span>
       </div>

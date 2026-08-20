@@ -42,7 +42,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
         <div className="flex items-center justify-between pb-4 border-b border-white/10 flex-shrink-0">
           <div>
             <div className="flex items-center space-x-2">
-              <span className="px-2.5 py-0.5 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded-full font-mono text-xs">
+              <span className="px-2.5 py-0.5 bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 rounded-full font-mono text-xs">
                 {seller?.vehicle} {seller?.model} ({seller?.year})
               </span>
               <span className="text-xs text-slate-400 font-mono">Seller: {seller?.sellerName}</span>
@@ -58,7 +58,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                 onClick={() => setActiveTab('gallery')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all flex items-center space-x-1.5 ${
                   activeTab === 'gallery'
-                    ? 'bg-cyan-500 text-black font-bold shadow-sm'
+                    ? 'bg-[#c5a059] text-black font-bold shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -70,7 +70,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                 onClick={() => setActiveTab('upload')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all flex items-center space-x-1.5 ${
                   activeTab === 'upload'
-                    ? 'bg-cyan-500 text-black font-bold shadow-sm'
+                    ? 'bg-[#c5a059] text-black font-bold shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -105,12 +105,12 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                     type="button"
                     className={`px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all flex items-center space-x-1.5 ${
                       activeCategory === cat
-                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 shadow-sm'
+                        ? 'bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 shadow-sm'
                         : 'bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800'
                     }`}
                   >
                     <span>{cat}</span>
-                    <span className="px-1.5 py-0.2 bg-slate-800 text-cyan-400 font-bold rounded-full text-[10px]">
+                    <span className="px-1.5 py-0.2 bg-slate-800 text-[#c5a059] font-bold rounded-full text-[10px]">
                       {count}
                     </span>
                   </button>
@@ -124,7 +124,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                 <div
                   key={img.id}
                   onClick={() => setLightboxIndex(idx)}
-                  className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 aspect-video cursor-pointer hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all"
+                  className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900 aspect-video cursor-pointer hover:border-[#c5a059]/50 hover:shadow-lg hover:shadow-[#c5a059]/10 transition-all"
                 >
                   <img
                     src={img.imageUrl}
@@ -133,13 +133,13 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity p-2.5 flex flex-col justify-between">
                     <div className="flex justify-between items-start">
-                      <span className="px-2 py-0.5 bg-black/70 backdrop-blur rounded text-[10px] font-mono text-cyan-400 border border-cyan-500/30">
+                      <span className="px-2 py-0.5 bg-black/70 backdrop-blur rounded text-[10px] font-mono text-[#c5a059] border border-[#c5a059]/30">
                         {img.category}
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-[11px] text-slate-300 font-mono">
                       <span>Click to view</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+                      <ExternalLink className="w-3.5 h-3.5 text-[#c5a059]" />
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
 
               <div className="mt-4 flex items-center justify-between w-full px-4 text-xs font-mono text-slate-300">
                 <div className="flex items-center space-x-2">
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded-full">
+                  <span className="px-3 py-1 bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 rounded-full">
                     Category: {currentLightboxImg.category}
                   </span>
                   <span>
@@ -211,7 +211,7 @@ export default function ImageViewerModal({ seller, onClose, onImagesUpdated }) {
                   href={currentLightboxImg.imageUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-cyan-400 rounded-lg flex items-center space-x-1 border border-white/10 transition-colors"
+                  className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-[#c5a059] rounded-lg flex items-center space-x-1 border border-white/10 transition-colors"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   <span>Open Full Resolution</span>

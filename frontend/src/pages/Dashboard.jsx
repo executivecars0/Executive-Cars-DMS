@@ -173,7 +173,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
                 </div>
                 <button
                   onClick={() => onNavigate('deals')}
-                  className="text-xs text-cyan-400 hover:underline font-mono flex items-center space-x-1"
+                  className="text-xs text-[#c5a059] hover:underline font-mono flex items-center space-x-1"
                 >
                   <span>View All Deals</span>
                   <ChevronRight className="w-3 h-3" />
@@ -199,7 +199,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
                         </td>
                         <td className="py-3 px-3 text-slate-300">{deal.buyer?.buyerName}</td>
                         <td className="py-3 px-3 text-slate-300 font-mono">{deal.salesman?.name}</td>
-                        <td className="py-3 px-3 font-mono font-bold text-cyan-400">
+                        <td className="py-3 px-3 font-mono font-bold text-[#c5a059]">
                           Rs. {deal.dealPrice?.toLocaleString()}
                         </td>
                         <td className="py-3 px-3 font-mono font-semibold text-emerald-400">
@@ -241,7 +241,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
                           <p className="text-[10px] text-slate-400 font-mono">{sm.dealsCount} deal(s)</p>
                         </div>
                       </div>
-                      <span className="text-xs font-mono font-bold text-cyan-400">PKR {sm.revenue?.toLocaleString()}</span>
+                      <span className="text-xs font-mono font-bold text-[#c5a059]">PKR {sm.revenue?.toLocaleString()}</span>
                     </div>
                   ))}
                   {(!stats?.topSalesmenList || stats.topSalesmenList.length === 0) && (
@@ -253,12 +253,12 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
               {/* Activity Log Feed */}
               <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-sm font-bold text-white uppercase font-mono tracking-wider mb-4 flex items-center space-x-2">
-                  <Activity className="w-4 h-4 text-cyan-400" />
+                  <Activity className="w-4 h-4 text-[#c5a059]" />
                   <span>Audit Trail</span>
                 </h3>
                 <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
                   {stats?.recentActivity?.map((act) => (
-                    <div key={act.id} className="text-xs border-l-2 border-cyan-500/40 pl-3 py-1">
+                    <div key={act.id} className="text-xs border-l-2 border-[#c5a059]/40 pl-3 py-1">
                       <p className="text-slate-200">{act.details}</p>
                       <span className="text-[10px] font-mono text-slate-500">
                         {new Date(act.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} • {act.user?.name || 'System'}
@@ -339,7 +339,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
               </div>
               <button
                 onClick={() => onNavigate('deals')}
-                className="text-xs text-cyan-400 hover:underline font-mono"
+                className="text-xs text-[#c5a059] hover:underline font-mono"
               >
                 View All My Deals →
               </button>
@@ -364,7 +364,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
                       </td>
                       <td className="py-3 px-3 text-slate-300">{deal.buyer?.buyerName}</td>
                       <td className="py-3 px-3 text-slate-400 font-mono">Rs. {deal.seller?.demandPrice?.toLocaleString()}</td>
-                      <td className="py-3 px-3 font-mono font-bold text-cyan-400">Rs. {deal.dealPrice?.toLocaleString()}</td>
+                      <td className="py-3 px-3 font-mono font-bold text-[#c5a059]">Rs. {deal.dealPrice?.toLocaleString()}</td>
                       <td className="py-3 px-3 font-mono font-semibold text-emerald-400">+Rs. {deal.profit?.toLocaleString()}</td>
                     </tr>
                   ))}

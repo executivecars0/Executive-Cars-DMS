@@ -1,7 +1,7 @@
 import React from 'react';
 
 const statusStyles = {
-  'New Lead': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+  'New Lead': 'bg-[#c5a059]/10 text-[#c5a059] border-[#c5a059]/30',
   'Contacted': 'bg-blue-500/10 text-blue-400 border-blue-500/30',
   'Follow Up': 'bg-amber-500/10 text-amber-400 border-amber-500/30',
   'Interested': 'bg-purple-500/10 text-purple-400 border-purple-500/30',

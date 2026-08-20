@@ -93,7 +93,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
             <p className="text-xs font-mono uppercase tracking-wider text-slate-400">Total Deals Closed</p>
             <h3 className="text-2xl font-extrabold text-white mt-0.5">{deals.length}</h3>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/20 flex items-center justify-center">
             <Handshake className="w-5 h-5" />
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
         <div className="glass-card rounded-2xl p-5 flex items-center justify-between">
           <div>
             <p className="text-xs font-mono uppercase tracking-wider text-slate-400">Total Closed Volume</p>
-            <h3 className="text-2xl font-extrabold text-cyan-400 mt-0.5">PKR {totalVolume.toLocaleString()}</h3>
+            <h3 className="text-2xl font-extrabold text-[#c5a059] mt-0.5">PKR {totalVolume.toLocaleString()}</h3>
           </div>
           <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center">
             <DollarSign className="w-5 h-5" />
@@ -170,7 +170,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                     Rs. {deal.seller?.demandPrice?.toLocaleString()}
                   </td>
 
-                  <td className="py-4 px-4 font-mono font-extrabold text-cyan-400 text-sm">
+                  <td className="py-4 px-4 font-mono font-extrabold text-[#c5a059] text-sm">
                     Rs. {deal.dealPrice?.toLocaleString()}
                   </td>
 
@@ -180,7 +180,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
 
                   <td className="py-4 px-4 font-mono text-slate-300">
                     <div className="flex items-center space-x-1">
-                      <UserCheck className="w-3.5 h-3.5 text-cyan-400" />
+                      <UserCheck className="w-3.5 h-3.5 text-[#c5a059]" />
                       <span>{deal.salesman?.name}</span>
                     </div>
                   </td>
@@ -188,7 +188,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                   <td className="py-4 px-4">
                     <button
                       onClick={() => setSelectedSellerForImages(deal.seller)}
-                      className="px-2.5 py-1 bg-slate-900 hover:bg-slate-800 border border-white/10 text-cyan-400 rounded-lg font-mono text-[11px] flex items-center space-x-1.5 transition-colors"
+                      className="px-2.5 py-1 bg-slate-900 hover:bg-slate-800 border border-white/10 text-[#c5a059] rounded-lg font-mono text-[11px] flex items-center space-x-1.5 transition-colors"
                     >
                       <ImageIcon className="w-3.5 h-3.5" />
                       <span>View ({deal.seller?.images?.length || 0})</span>
@@ -229,7 +229,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                   required
                   value={selectedSellerId}
                   onChange={(e) => setSelectedSellerId(e.target.value)}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="">-- Choose Vehicle Inventory --</option>
                   {sellersList.map(s => (
@@ -246,7 +246,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                   required
                   value={selectedBuyerId}
                   onChange={(e) => setSelectedBuyerId(e.target.value)}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="">-- Choose Buyer Inquiry --</option>
                   {buyersList.map(b => (
@@ -265,7 +265,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                   placeholder="e.g. 49500000"
                   value={dealPrice}
                   onChange={(e) => setDealPrice(e.target.value)}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-cyan-400 font-mono font-bold focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-[#c5a059] font-mono font-bold focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -288,7 +288,7 @@ export default function Deals({ search, isAddModalOpen, setIsAddModalOpen }) {
                   placeholder="Payment method, biometric transfer status, warranty notes..."
                   value={remarks}
                   onChange={(e) => setRemarks(e.target.value)}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                 ></textarea>
               </div>
 

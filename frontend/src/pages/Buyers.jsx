@@ -478,7 +478,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
             </h2>
           </div>
           <p className="text-xs font-mono text-slate-400 mt-0.5">
-            Showing <strong className="text-cyan-400">{displayBuyers.length}</strong> matching {scope === 'bank_cases' ? 'bank financing case(s)' : 'buyer inquiry(ies)'}
+            Showing <strong className="text-[#c5a059]">{displayBuyers.length}</strong> matching {scope === 'bank_cases' ? 'bank financing case(s)' : 'buyer inquiry(ies)'}
           </p>
         </div>
         <div className="flex items-center space-x-2">
@@ -486,7 +486,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
             onClick={exportBuyersPDF}
             className="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-white/10 font-bold rounded-xl text-xs shadow-lg transition-all flex items-center space-x-1.5"
           >
-            <Printer className="w-4 h-4 text-cyan-400" />
+            <Printer className="w-4 h-4 text-[#c5a059]" />
             <span>Export PDF</span>
           </button>
           {isAdmin && (
@@ -547,13 +547,13 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                   <tr 
                     key={buyer.id} 
                     onClick={() => openDetailModal(buyer)}
-                    className="hover:bg-cyan-500/5 cursor-pointer transition-colors group"
+                    className="hover:bg-[#c5a059]/5 cursor-pointer transition-colors group"
                   >
-                    <td className="py-4 px-4 font-mono font-bold text-cyan-400 text-xs whitespace-nowrap">
+                    <td className="py-4 px-4 font-mono font-bold text-[#c5a059] text-xs whitespace-nowrap">
                       {formatDateStr(buyer.registrationDate || buyer.createdAt)}
                     </td>
                     <td className="py-4 px-4" onClick={() => openDetailModal(buyer)}>
-                      <div className="font-bold text-white text-sm group-hover:text-cyan-400 transition-colors">{buyer.buyerName}</div>
+                      <div className="font-bold text-white text-sm group-hover:text-[#c5a059] transition-colors">{buyer.buyerName}</div>
                       <div className="text-slate-400 font-mono text-[11px] flex items-center space-x-1 mt-0.5">
                         <span>{buyer.buyerPhone}</span>
                         <span>•</span>
@@ -577,7 +577,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                         <div className="space-y-0.5">
                           <div className="text-emerald-400 font-bold">Total: Rs. {(buyer.budget + (buyer.processingFees || 0))?.toLocaleString()}</div>
                           <div className="text-amber-300 text-[10px]">Down ({buyer.downpaymentPercent || 0}%): Rs. {(buyer.downpaymentAmount || 0).toLocaleString()}</div>
-                          <div className="text-cyan-300 text-[10px] font-bold">Due: Rs. {(buyer.dueAmount || 0).toLocaleString()}</div>
+                          <div className="text-[#dfc18b] text-[10px] font-bold">Due: Rs. {(buyer.dueAmount || 0).toLocaleString()}</div>
                         </div>
                       ) : (
                         <div className="text-emerald-400 font-bold">Rs. {buyer.budget?.toLocaleString()}</div>
@@ -621,7 +621,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                       <div className="flex items-center justify-end space-x-1.5">
                         <button
                           onClick={() => openDetailModal(buyer)}
-                          className="px-2 py-1.5 rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 border border-white/10 text-slate-300 hover:text-cyan-400 font-mono text-[10px] flex items-center space-x-1 transition-all"
+                          className="px-2 py-1.5 rounded-lg bg-slate-800/80 hover:bg-[#c5a059]/20 border border-white/10 text-slate-300 hover:text-[#c5a059] font-mono text-[10px] flex items-center space-x-1 transition-all"
                           title="View full buyer inquiry details"
                         >
                           <Eye className="w-3.5 h-3.5" />
@@ -674,8 +674,8 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
           <div className="p-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-slate-400 bg-slate-900/40">
             <div className="flex items-center space-x-3">
               <div>
-                Showing <strong className="text-cyan-400">{(currentPage - 1) * pageSize + 1}</strong> to{' '}
-                <strong className="text-cyan-400">{Math.min(currentPage * pageSize, displayBuyers.length)}</strong> of{' '}
+                Showing <strong className="text-[#c5a059]">{(currentPage - 1) * pageSize + 1}</strong> to{' '}
+                <strong className="text-[#c5a059]">{Math.min(currentPage * pageSize, displayBuyers.length)}</strong> of{' '}
                 <strong className="text-white">{displayBuyers.length}</strong> buyer entries
               </div>
               <div className="flex items-center space-x-1.5 ml-4">
@@ -686,7 +686,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     setPageSize(Number(e.target.value));
                     setCurrentPage(1);
                   }}
-                  className="bg-slate-800 border border-white/10 text-cyan-400 rounded-lg px-2 py-1 focus:outline-none text-xs"
+                  className="bg-slate-800 border border-white/10 text-[#c5a059] rounded-lg px-2 py-1 focus:outline-none text-xs"
                 >
                   <option value={25}>25</option>
                   <option value={50}>50</option>
@@ -706,7 +706,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                 Previous
               </button>
 
-              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-white/10 text-cyan-400 font-bold">
+              <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-white/10 text-[#c5a059] font-bold">
                 Page {currentPage} of {Math.ceil(displayBuyers.length / pageSize) || 1}
               </span>
 
@@ -753,7 +753,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="Harrison Forde"
                     value={formData.buyerName}
                     onChange={(e) => setFormData({ ...formData, buyerName: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
 
@@ -764,7 +764,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="+92 300 0000000"
                     value={formData.buyerPhone}
                     onChange={(e) => setFormData({ ...formData, buyerPhone: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </div>
 
@@ -775,7 +775,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="Lahore / Sahiwal"
                     value={formData.buyerCity}
                     onChange={(e) => setFormData({ ...formData, buyerCity: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
               </div>
@@ -788,7 +788,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="e.g. Toyota / Honda"
                     value={formData.vehicle}
                     onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
 
@@ -799,7 +799,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="e.g. Fortuner / Civic"
                     value={formData.model}
                     onChange={(e) => setFormData({ ...formData, model: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
               </div>
@@ -807,11 +807,11 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
               {/* Vehicle Condition Selector */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-900/60 p-3 rounded-2xl border border-white/5">
                 <div>
-                  <label className="block text-xs font-mono text-cyan-400 font-bold mb-1">Vehicle Condition</label>
+                  <label className="block text-xs font-mono text-[#c5a059] font-bold mb-1">Vehicle Condition</label>
                   <select
                     value={formData.carCondition}
                     onChange={(e) => setFormData({ ...formData, carCondition: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-bold"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-bold"
                   >
                     <option value="Used">Used Car</option>
                     <option value="Zero Meter">Zero Meter (Brand New)</option>
@@ -843,7 +843,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="20000000"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-emerald-400 font-mono font-bold focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-emerald-400 font-mono font-bold focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
 
@@ -854,7 +854,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="e.g. 2022 or 2022/23"
                     value={formData.year}
                     onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </div>
 
@@ -865,7 +865,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     placeholder="e.g. White, Black, Any"
                     value={formData.color}
                     onChange={(e) => setFormData({ ...formData, color: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </div>
 
@@ -874,7 +874,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                   <select
                     value={formData.leadStatus}
                     onChange={(e) => setFormData({ ...formData, leadStatus: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   >
                     {leadStatuses.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
@@ -968,7 +968,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                             <span>+ Rs. {parseFloat(formData.processingFees || 0).toLocaleString()}</span>
                           </div>
                         )}
-                        <div className="flex justify-between text-cyan-300 font-bold text-sm pt-1.5 border-t border-white/10">
+                        <div className="flex justify-between text-[#dfc18b] font-bold text-sm pt-1.5 border-t border-white/10">
                           <span>Calculated Due Amount (Bank Loan Balance + Fees):</span>
                           <span>Rs. {((parseFloat(formData.budget || 0) - (parseFloat(formData.budget || 0) * ((parseFloat(formData.downpaymentPercent) || 0) / 100))) + (parseFloat(formData.processingFees) || 0)).toLocaleString()}</span>
                         </div>
@@ -984,7 +984,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                   <select
                     value={formData.leadReferredBy}
                     onChange={(e) => setFormData({ ...formData, leadReferredBy: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   >
                     <option value="">Direct / None</option>
                     {teamList.map(member => (
@@ -1001,7 +1001,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                     <select
                       value={formData.assignedTo}
                       onChange={(e) => setFormData({ ...formData, assignedTo: e.target.value })}
-                      className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                      className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                     >
                       <option value="">Unassigned</option>
                       {salesmenList.map(sm => (
@@ -1019,7 +1019,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                   placeholder="Specific buyer requirements, financing state, trade-in details..."
                   value={formData.comments}
                   onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                 ></textarea>
               </div>
 
@@ -1033,7 +1033,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-cyan-500/20 transition-all"
+                  className="px-5 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-[#c5a059]/20 transition-all"
                 >
                   {isEditModalOpen ? 'Save Changes' : 'Save Buyer Entry'}
                 </button>

@@ -1,15 +1,16 @@
 import React from 'react';
 
-export default function StatCard({ title, value, icon: Icon, trend, trendLabel, subtitle, color = 'cyan' }) {
+export default function StatCard({ title, value, icon: Icon, trend, trendLabel, subtitle, color = 'gold' }) {
   const colorMap = {
-    cyan: 'from-cyan-500/20 to-blue-600/20 text-cyan-400 border-cyan-500/30',
+    gold: 'from-[#c5a059]/20 to-[#9a7a47]/20 text-[#c5a059] border-[#c5a059]/30',
+    cyan: 'from-[#c5a059]/20 to-[#9a7a47]/20 text-[#c5a059] border-[#c5a059]/30',
     emerald: 'from-emerald-500/20 to-teal-600/20 text-emerald-400 border-emerald-500/30',
     amber: 'from-amber-500/20 to-orange-600/20 text-amber-400 border-amber-500/30',
     purple: 'from-purple-500/20 to-indigo-600/20 text-purple-400 border-purple-500/30',
     rose: 'from-rose-500/20 to-pink-600/20 text-rose-400 border-rose-500/30'
   };
 
-  const iconStyle = colorMap[color] || colorMap.cyan;
+  const iconStyle = colorMap[color] || colorMap.gold;
 
   return (
     <div className="glass-card glass-card-hover rounded-2xl p-5 flex flex-col justify-between relative overflow-hidden group">

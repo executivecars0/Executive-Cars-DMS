@@ -93,7 +93,7 @@ export default function Users() {
 
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-1.5"
+          className="px-4 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold rounded-xl text-xs shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-1.5"
         >
           <Plus className="w-4 h-4" />
           <span>Create Salesman Account</span>
@@ -123,7 +123,7 @@ export default function Users() {
                       <div className="flex items-center space-x-2">
                         <span>{u.name}</span>
                         {isSelf && (
-                          <span className="px-2 py-0.5 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded text-[10px] font-mono">
+                          <span className="px-2 py-0.5 bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 rounded text-[10px] font-mono">
                             YOU
                           </span>
                         )}
@@ -141,7 +141,7 @@ export default function Users() {
                           SUPER ADMIN
                         </span>
                       ) : u.role === 'ADMIN' ? (
-                        <span className="px-2 py-0.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded text-xs">
+                        <span className="px-2 py-0.5 bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/30 rounded text-xs">
                           ADMIN
                         </span>
                       ) : (
@@ -243,7 +243,7 @@ export default function Users() {
                   placeholder="e.g. John Miller"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                 />
               </div>
 
@@ -255,7 +255,7 @@ export default function Users() {
                   placeholder="john@dealership.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -266,7 +266,7 @@ export default function Users() {
                   placeholder="+1 (555) 000-0000"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -278,7 +278,7 @@ export default function Users() {
                   placeholder="Sales123!"
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -287,7 +287,7 @@ export default function Users() {
                 <select
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="SALESMAN">Salesman</option>
                   <option value="ADMIN">Administrator</option>
@@ -305,7 +305,7 @@ export default function Users() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-cyan-500/20 transition-all"
+                  className="px-5 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-[#c5a059]/20 transition-all"
                 >
                   Create & Activate Account
                 </button>

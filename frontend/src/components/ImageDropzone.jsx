@@ -56,13 +56,13 @@ export default function ImageDropzone({ sellerId, images = [], onImagesUpdated }
               type="button"
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center space-x-1.5 ${
                 activeCategory === cat
-                  ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 shadow-sm'
+                  ? 'bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 shadow-sm'
                   : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800'
               }`}
             >
               <span>{cat}</span>
               {catCount > 0 && (
-                <span className="ml-1 px-1.5 py-0.2 bg-cyan-500 text-black font-mono font-bold rounded-full text-[10px]">
+                <span className="ml-1 px-1.5 py-0.2 bg-[#c5a059] text-black font-mono font-bold rounded-full text-[10px]">
                   {catCount}
                 </span>
               )}
@@ -85,12 +85,12 @@ export default function ImageDropzone({ sellerId, images = [], onImagesUpdated }
           htmlFor={`file-upload-${activeCategory}`}
           className="cursor-pointer flex flex-col items-center justify-center space-y-2 py-2"
         >
-          <div className="w-10 h-10 rounded-full bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
+          <div className="w-10 h-10 rounded-full bg-[#c5a059]/10 text-[#c5a059] flex items-center justify-center border border-[#c5a059]/20">
             <Upload className="w-5 h-5" />
           </div>
           <div>
             <p className="text-xs font-semibold text-white">
-              Upload photos/documents for category <span className="text-cyan-400">[{activeCategory}]</span>
+              Upload photos/documents for category <span className="text-[#c5a059]">[{activeCategory}]</span>
             </p>
             <p className="text-[11px] text-slate-400">PNG, JPG, WEBP, or PDF up to 10MB each</p>
           </div>
@@ -98,14 +98,14 @@ export default function ImageDropzone({ sellerId, images = [], onImagesUpdated }
 
         {selectedFiles.length > 0 && (
           <div className="mt-3 pt-3 border-t border-white/5 flex items-center justify-between">
-            <span className="text-xs font-mono text-cyan-400">
+            <span className="text-xs font-mono text-[#c5a059]">
               {selectedFiles.length} file(s) selected
             </span>
             <button
               onClick={handleUpload}
               disabled={uploading}
               type="button"
-              className="px-4 py-1.5 bg-cyan-500 text-black font-bold rounded-lg text-xs hover:bg-cyan-400 disabled:opacity-50 transition-all flex items-center space-x-1"
+              className="px-4 py-1.5 bg-[#c5a059] text-black font-bold rounded-lg text-xs hover:bg-[#c5a059] disabled:opacity-50 transition-all flex items-center space-x-1"
             >
               {uploading ? 'Uploading...' : 'Confirm Upload'}
             </button>
@@ -126,7 +126,7 @@ export default function ImageDropzone({ sellerId, images = [], onImagesUpdated }
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-2 flex flex-col justify-between">
               <div className="flex justify-between items-start">
-                <span className="px-2 py-0.5 bg-black/60 backdrop-blur rounded text-[10px] font-mono text-cyan-400 border border-white/10">
+                <span className="px-2 py-0.5 bg-black/60 backdrop-blur rounded text-[10px] font-mono text-[#c5a059] border border-white/10">
                   {img.category}
                 </span>
                 <button

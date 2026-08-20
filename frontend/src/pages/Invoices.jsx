@@ -119,13 +119,13 @@ const CameraCaptureWidget = ({ label, currentPhoto, onPhotoCaptured, onPhotoRemo
       </div>
 
       {currentPhoto ? (
-        <div className="relative group w-32 h-32 rounded-xl overflow-hidden border-2 border-cyan-500/50 bg-black shadow-lg">
+        <div className="relative group w-32 h-32 rounded-xl overflow-hidden border-2 border-[#c5a059]/50 bg-black shadow-lg">
           <img src={currentPhoto} alt={label} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center gap-2">
             <button
               type="button"
               onClick={startCamera}
-              className="px-2.5 py-1.5 bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs rounded-lg shadow cursor-pointer"
+              className="px-2.5 py-1.5 bg-[#c5a059] hover:bg-[#c5a059] text-black font-bold text-xs rounded-lg shadow cursor-pointer"
             >
               Retake
             </button>
@@ -133,12 +133,12 @@ const CameraCaptureWidget = ({ label, currentPhoto, onPhotoCaptured, onPhotoRemo
         </div>
       ) : isCameraActive ? (
         <div className="space-y-2">
-          <video ref={videoRef} autoPlay playsInline className="w-full max-h-52 rounded-xl border-2 border-cyan-500/50 bg-black shadow-inner" />
+          <video ref={videoRef} autoPlay playsInline className="w-full max-h-52 rounded-xl border-2 border-[#c5a059]/50 bg-black shadow-inner" />
           <div className="flex gap-2">
             <button
               type="button"
               onClick={takeSnapshot}
-              className="px-3.5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs rounded-lg flex items-center gap-1.5 cursor-pointer shadow-md"
+              className="px-3.5 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-white font-bold text-xs rounded-lg flex items-center gap-1.5 cursor-pointer shadow-md"
             >
               <Camera className="w-4 h-4" />
               <span>📸 Snap Photo Now</span>
@@ -157,7 +157,7 @@ const CameraCaptureWidget = ({ label, currentPhoto, onPhotoCaptured, onPhotoRemo
           <button
             type="button"
             onClick={startCamera}
-            className="px-3.5 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 font-bold text-xs rounded-xl border border-cyan-500/30 flex items-center gap-1.5 cursor-pointer transition-all shadow-sm"
+            className="px-3.5 py-2 bg-[#c5a059]/20 hover:bg-[#c5a059]/30 text-[#c5a059] font-bold text-xs rounded-xl border border-[#c5a059]/30 flex items-center gap-1.5 cursor-pointer transition-all shadow-sm"
           >
             <Camera className="w-4 h-4" />
             <span>📷 Click Live Camera Photo</span>
@@ -1362,15 +1362,15 @@ export default function Invoices() {
     <div className="p-4 sm:p-6 lg:p-8 space-y-6 max-w-[1600px] mx-auto">
       {/* Top Banner Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 glass-card p-6 rounded-2xl border border-white/10 relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-96 h-96 bg-[#c5a059]/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
         <div>
           <div className="flex items-center space-x-3">
-            <div className="p-3 bg-cyan-500/20 rounded-xl text-cyan-400 border border-cyan-500/30">
+            <div className="p-3 bg-[#c5a059]/20 rounded-xl text-[#c5a059] border border-[#c5a059]/30">
               <Receipt className="w-6 h-6" />
             </div>
             <div>
               <h1 className="text-2xl font-extrabold text-white tracking-tight flex items-center gap-2">
-                Sales Receipts & Vouchers <span className="text-sm font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">سیل رسید</span>
+                Sales Receipts & Vouchers <span className="text-sm font-mono text-[#c5a059] bg-[#c5a059]/10 px-2 py-0.5 rounded border border-[#c5a059]/20">سیل رسید</span>
               </h1>
               <p className="text-xs text-slate-400 mt-1">Super Admin Exclusive • Create, view & print official vehicle sales agreements</p>
             </div>
@@ -1382,7 +1382,7 @@ export default function Invoices() {
             resetForm();
             setIsAddModalOpen(true);
           }}
-          className="flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 transition-all cursor-pointer"
+          className="flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-white font-bold text-xs shadow-lg shadow-[#c5a059]/25 transition-all cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>New Sales Receipt (سیل رسید)</span>
@@ -1394,7 +1394,7 @@ export default function Invoices() {
         <div className="glass-card p-5 rounded-xl border border-white/5">
           <div className="flex items-center justify-between text-slate-400 text-xs font-medium">
             <span>Total Sales Receipts</span>
-            <FileText className="w-4 h-4 text-cyan-400" />
+            <FileText className="w-4 h-4 text-[#c5a059]" />
           </div>
           <p className="text-2xl font-bold text-white mt-2 font-mono">{stats.totalInvoices || invoices.length}</p>
           <p className="text-[10px] text-slate-500 mt-1">Issued Super Admin vouchers</p>
@@ -1449,7 +1449,7 @@ export default function Invoices() {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer ${
                 selectedCategory === cat.id
-                  ? 'bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20'
+                  ? 'bg-[#c5a059] text-slate-950 shadow-lg shadow-[#c5a059]/20'
                   : 'bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-white/5'
               }`}
             >
@@ -1466,11 +1466,11 @@ export default function Invoices() {
               placeholder="Search Voucher #, Payee, Buyer, Seller, Reg #..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-lg bg-slate-900/60 border border-white/10 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+              className="w-full pl-9 pr-4 py-2 rounded-lg bg-slate-900/60 border border-white/10 text-white text-xs placeholder-slate-500 focus:outline-none focus:border-[#c5a059]"
             />
           </div>
           <div className="text-xs text-slate-400">
-            Showing <span className="text-cyan-400 font-bold">{invoices.length}</span> official records
+            Showing <span className="text-[#c5a059] font-bold">{invoices.length}</span> official records
           </div>
         </div>
       </div>
@@ -1479,7 +1479,7 @@ export default function Invoices() {
       <div className="glass-card rounded-xl border border-white/5 overflow-hidden">
         {loading ? (
           <div className="p-12 text-center text-slate-400 text-xs font-mono">
-            <div className="w-6 h-6 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+            <div className="w-6 h-6 border-2 border-[#c5a059] border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
             Loading Super Admin Sales Receipts & Vouchers...
           </div>
         ) : invoices.length === 0 ? (
@@ -1518,12 +1518,12 @@ export default function Invoices() {
                   return (
                     <tr key={inv.id} className="hover:bg-white/[0.02] transition-colors">
                       <td className="p-3.5">
-                        <div className="font-mono text-cyan-400 font-bold">{receiptNo}</div>
+                        <div className="font-mono text-[#c5a059] font-bold">{receiptNo}</div>
                         <span className={`inline-block text-[9px] px-2 py-0.5 rounded font-bold uppercase mt-1 ${
                           cat === 'DELIVERY_LETTER' ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30' :
                           cat === 'PAYMENT_VOUCHER' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' :
                           cat === 'BOOKING_RECEIPT' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
-                          'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                          'bg-[#c5a059]/20 text-[#dfc18b] border border-[#c5a059]/30'
                         }`}>
                           {cat.replace('_', ' ')}
                         </span>
@@ -1570,7 +1570,7 @@ export default function Invoices() {
                         <div className="flex items-center space-x-2">
                           <button
                             onClick={() => exportInvoicePDF(inv)}
-                            className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/30 font-medium text-[11px] flex items-center space-x-1"
+                            className="p-1.5 rounded-lg bg-[#c5a059]/10 text-[#c5a059] hover:bg-[#c5a059]/20 border border-[#c5a059]/30 font-medium text-[11px] flex items-center space-x-1"
                             title="Print Voucher"
                           >
                             <Printer className="w-3.5 h-3.5" />
@@ -1605,11 +1605,11 @@ export default function Invoices() {
       {/* CREATE / EDIT SALES RECEIPT & VOUCHERS MODAL */}
       {isAddModalOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-[#0b192c] border border-cyan-500/30 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+          <div className="bg-[#0b192c] border border-[#c5a059]/30 rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
             {/* Modal Header */}
             <div className="p-5 border-b border-white/10 flex items-center justify-between bg-slate-900/60">
               <div className="flex items-center space-x-3">
-                <div className="p-2.5 bg-cyan-500/20 text-cyan-400 rounded-xl border border-cyan-500/30">
+                <div className="p-2.5 bg-[#c5a059]/20 text-[#c5a059] rounded-xl border border-[#c5a059]/30">
                   <FileText className="w-5 h-5" />
                 </div>
                 <div>
@@ -1619,7 +1619,7 @@ export default function Invoices() {
                      formData.category === 'BOOKING_RECEIPT' ? 'Booking Receipt' :
                      formData.category === 'PAYMENT_VOUCHER' ? 'Payment Voucher' :
                      'Sales Receipt'}
-                    <span className="text-cyan-400 font-normal text-sm font-mono">
+                    <span className="text-[#c5a059] font-normal text-sm font-mono">
                       {formData.category === 'DELIVERY_LETTER' ? '(ڈیلیوری لیٹر)' :
                        formData.category === 'BOOKING_RECEIPT' ? '(رسید)' :
                        formData.category === 'PAYMENT_VOUCHER' ? '(ادائیگی واؤچر)' :
@@ -1660,7 +1660,7 @@ export default function Invoices() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`px-3 py-2 rounded-lg font-medium whitespace-nowrap transition-all cursor-pointer ${
                       activeTab === tab.id
-                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                        ? 'bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/30'
                         : 'text-slate-400 hover:text-white hover:bg-white/5'
                     }`}
                   >
@@ -1674,7 +1674,7 @@ export default function Invoices() {
             <form onSubmit={handleSaveInvoice} className="p-6 overflow-y-auto flex-1 space-y-6">
               {/* CATEGORY SWITCHER CARDS */}
               <div>
-                <label className="block text-xs font-bold text-cyan-400 mb-2 uppercase tracking-wider">
+                <label className="block text-xs font-bold text-[#c5a059] mb-2 uppercase tracking-wider">
                   Voucher / Invoice Category (اقسام واؤچر) <span className="text-rose-400">*</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
@@ -1690,7 +1690,7 @@ export default function Invoices() {
                       onClick={() => handleInputChange('category', cat.id)}
                       className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                         formData.category === cat.id
-                          ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400 shadow-md font-bold'
+                          ? 'bg-[#c5a059]/20 border-[#c5a059] text-[#c5a059] shadow-md font-bold'
                           : 'bg-slate-900/60 border-white/10 text-slate-400 hover:text-white hover:bg-slate-800'
                       }`}
                     >
@@ -1721,7 +1721,7 @@ export default function Invoices() {
                   </div>
 
                   <div className="p-3.5 bg-slate-900/90 border border-white/10 rounded-xl text-xs text-slate-300 italic leading-relaxed">
-                    <span className="font-bold text-cyan-400 not-italic">Paper Pad Text Preview: </span>
+                    <span className="font-bold text-[#c5a059] not-italic">Paper Pad Text Preview: </span>
                     "I, the undersigned, here declare that I have thoroughly checked the machine as and whatever it is and the relevant documents of Motor Car..."
                   </div>
 
@@ -1763,7 +1763,7 @@ export default function Invoices() {
                           type="text"
                           readOnly
                           value="EXECUTIVE CARS"
-                          className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-white/10 text-cyan-400 text-xs font-bold font-mono cursor-not-allowed"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-white/10 text-[#c5a059] text-xs font-bold font-mono cursor-not-allowed"
                         />
                       </div>
                       <div>
@@ -2009,7 +2009,7 @@ export default function Invoices() {
 
                   {/* 1. Date & Customer Info */}
                   <div className="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-white/10">
-                    <h5 className="text-xs font-bold text-cyan-400 uppercase tracking-wider border-b border-white/10 pb-2">1. Date & Customer Details</h5>
+                    <h5 className="text-xs font-bold text-[#c5a059] uppercase tracking-wider border-b border-white/10 pb-2">1. Date & Customer Details</h5>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-slate-300 mb-1">Date (تاریخ) <span className="text-rose-400">*</span></label>
@@ -2017,7 +2017,7 @@ export default function Invoices() {
                           type="date"
                           value={formData.dated}
                           onChange={(e) => handleInputChange('dated', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           required
                         />
                       </div>
@@ -2028,7 +2028,7 @@ export default function Invoices() {
                           placeholder="e.g. Mian Sarfraz"
                           value={formData.buyerName}
                           onChange={(e) => handleInputChange('buyerName', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           required
                         />
                       </div>
@@ -2039,7 +2039,7 @@ export default function Invoices() {
                           placeholder="e.g. 0300-1234567"
                           value={formData.buyerPhone}
                           onChange={(e) => handleInputChange('buyerPhone', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                           required
                         />
                       </div>
@@ -2048,7 +2048,7 @@ export default function Invoices() {
 
                   {/* 2. Vehicle Specs */}
                   <div className="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-white/10">
-                    <h5 className="text-xs font-bold text-cyan-400 uppercase tracking-wider border-b border-white/10 pb-2">2. Vehicle Specifications</h5>
+                    <h5 className="text-xs font-bold text-[#c5a059] uppercase tracking-wider border-b border-white/10 pb-2">2. Vehicle Specifications</h5>
                     <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-slate-300 mb-1">Vehicle No. (گاڑی نمبر)</label>
@@ -2057,7 +2057,7 @@ export default function Invoices() {
                           placeholder="e.g. LEA-22-4589 or Unregistered"
                           value={formData.registrationNo}
                           onChange={(e) => handleInputChange('registrationNo', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                         />
                       </div>
                       <div>
@@ -2067,7 +2067,7 @@ export default function Invoices() {
                           placeholder="Engine number"
                           value={formData.engineNumber}
                           onChange={(e) => handleInputChange('engineNumber', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                         />
                       </div>
                       <div>
@@ -2077,7 +2077,7 @@ export default function Invoices() {
                           placeholder="Chassis number"
                           value={formData.chassisNumber}
                           onChange={(e) => handleInputChange('chassisNumber', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                         />
                       </div>
                       <div>
@@ -2087,7 +2087,7 @@ export default function Invoices() {
                           placeholder="e.g. White / Silver"
                           value={formData.color}
                           onChange={(e) => handleInputChange('color', e.target.value)}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                         />
                       </div>
                     </div>
@@ -2095,7 +2095,7 @@ export default function Invoices() {
 
                   {/* 3. Financial Deal Details */}
                   <div className="space-y-3 bg-slate-900/80 p-4 rounded-xl border border-white/10">
-                    <h5 className="text-xs font-bold text-cyan-400 uppercase tracking-wider border-b border-white/10 pb-2">3. Deal Amounts & Calculations</h5>
+                    <h5 className="text-xs font-bold text-[#c5a059] uppercase tracking-wider border-b border-white/10 pb-2">3. Deal Amounts & Calculations</h5>
                     <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                       <div>
                         <label className="block text-xs font-semibold text-slate-300 mb-1">Total Deal (Rs.) <span className="text-rose-400">*</span></label>
@@ -2109,7 +2109,7 @@ export default function Invoices() {
                             handleInputChange('totalPrice', e.target.value);
                             handleInputChange('remainingAmount', Math.max(0, tot - adv));
                           }}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                           required
                         />
                       </div>
@@ -2125,7 +2125,7 @@ export default function Invoices() {
                             handleInputChange('advanceAmount', e.target.value);
                             handleInputChange('remainingAmount', Math.max(0, tot - adv));
                           }}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                           required
                         />
                       </div>
@@ -2148,7 +2148,7 @@ export default function Invoices() {
                             handleInputChange('agreedAmountWords', e.target.value);
                             handleInputChange('inWords', e.target.value);
                           }}
-                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 italic"
+                          className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] italic"
                         />
                       </div>
                     </div>
@@ -2339,7 +2339,7 @@ export default function Invoices() {
                   {/* TAB 1: GENERAL DETAILS */}
                   {activeTab === 'general' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Basic Metadata & Registration</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Basic Metadata & Registration</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2349,7 +2349,7 @@ export default function Invoices() {
                             type="date"
                             value={formData.dated}
                             onChange={(e) => handleInputChange('dated', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2363,7 +2363,7 @@ export default function Invoices() {
                             placeholder="e.g. LEA-22-4589 or Unregistered"
                             value={formData.registrationNo}
                             onChange={(e) => handleInputChange('registrationNo', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2376,7 +2376,7 @@ export default function Invoices() {
                             placeholder="e.g. 03:30 PM"
                             value={formData.time || formData.agreementTime || ''}
                             onChange={(e) => handleInputChange('time', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
                       </div>
@@ -2386,7 +2386,7 @@ export default function Invoices() {
                   {/* TAB 2: SELLER DETAILS */}
                   {activeTab === 'seller' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Seller Details (فروخت کنندہ)</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Seller Details (فروخت کنندہ)</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2397,7 +2397,7 @@ export default function Invoices() {
                             placeholder="Full name of seller"
                             value={formData.sellerName}
                             onChange={(e) => handleInputChange('sellerName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2411,7 +2411,7 @@ export default function Invoices() {
                             placeholder="Father's name"
                             value={formData.sellerFatherName}
                             onChange={(e) => handleInputChange('sellerFatherName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2424,7 +2424,7 @@ export default function Invoices() {
                             placeholder="35501-1234567-1"
                             value={formData.sellerCnic || ''}
                             onChange={(e) => handleInputChange('sellerCnic', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                           />
                         </div>
 
@@ -2437,7 +2437,7 @@ export default function Invoices() {
                             placeholder="0300-0000000"
                             value={formData.sellerPhone}
                             onChange={(e) => handleInputChange('sellerPhone', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2450,7 +2450,7 @@ export default function Invoices() {
                             placeholder="Complete residential address"
                             value={formData.sellerAddress}
                             onChange={(e) => handleInputChange('sellerAddress', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2469,7 +2469,7 @@ export default function Invoices() {
                   {/* TAB 3: BUYER DETAILS */}
                   {activeTab === 'buyer' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Buyer Details (خریدار)</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Buyer Details (خریدار)</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2480,7 +2480,7 @@ export default function Invoices() {
                             placeholder="Full name of buyer"
                             value={formData.buyerName}
                             onChange={(e) => handleInputChange('buyerName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2494,7 +2494,7 @@ export default function Invoices() {
                             placeholder="Buyer father's name"
                             value={formData.buyerFatherName}
                             onChange={(e) => handleInputChange('buyerFatherName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2507,7 +2507,7 @@ export default function Invoices() {
                             placeholder="35501-1234567-1"
                             value={formData.buyerCnic || ''}
                             onChange={(e) => handleInputChange('buyerCnic', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500 font-mono"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059] font-mono"
                           />
                         </div>
 
@@ -2520,7 +2520,7 @@ export default function Invoices() {
                             placeholder="0300-0000000"
                             value={formData.buyerPhone}
                             onChange={(e) => handleInputChange('buyerPhone', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2533,7 +2533,7 @@ export default function Invoices() {
                             placeholder="Buyer's address / city"
                             value={formData.buyerAddress}
                             onChange={(e) => handleInputChange('buyerAddress', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2552,7 +2552,7 @@ export default function Invoices() {
                   {/* TAB 4: VEHICLE DETAILS */}
                   {activeTab === 'vehicle' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Vehicle Specifications (گاڑی کی تفصیلات)</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Vehicle Specifications (گاڑی کی تفصیلات)</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2563,7 +2563,7 @@ export default function Invoices() {
                             placeholder="e.g. Toyota / Honda"
                             value={formData.vehicleMaker}
                             onChange={(e) => handleInputChange('vehicleMaker', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2577,7 +2577,7 @@ export default function Invoices() {
                             placeholder="e.g. Civic Oriel 2022"
                             value={formData.vehicleModel}
                             onChange={(e) => handleInputChange('vehicleModel', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2591,7 +2591,7 @@ export default function Invoices() {
                             placeholder="e.g. 1800 cc"
                             value={formData.powerCapacity}
                             onChange={(e) => handleInputChange('powerCapacity', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2604,7 +2604,7 @@ export default function Invoices() {
                             placeholder="Engine serial number"
                             value={formData.engineNumber}
                             onChange={(e) => handleInputChange('engineNumber', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2617,7 +2617,7 @@ export default function Invoices() {
                             placeholder="Chassis serial number"
                             value={formData.chassisNumber}
                             onChange={(e) => handleInputChange('chassisNumber', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2630,7 +2630,7 @@ export default function Invoices() {
                             placeholder="Post office location"
                             value={formData.postOffice}
                             onChange={(e) => handleInputChange('postOffice', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2643,7 +2643,7 @@ export default function Invoices() {
                             placeholder="e.g. Paid up to June 2026"
                             value={formData.lastToken}
                             onChange={(e) => handleInputChange('lastToken', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2656,7 +2656,7 @@ export default function Invoices() {
                             placeholder="Name on smartcard / papers"
                             value={formData.regName}
                             onChange={(e) => handleInputChange('regName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2669,7 +2669,7 @@ export default function Invoices() {
                             placeholder="Registered owner father name"
                             value={formData.regFatherName}
                             onChange={(e) => handleInputChange('regFatherName', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
                       </div>
@@ -2679,7 +2679,7 @@ export default function Invoices() {
                   {/* TAB 5: TRANSACTION AGREEMENT */}
                   {activeTab === 'agreement' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Transaction Agreement (اقرار نامہ و معاہدہ)</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Transaction Agreement (اقرار نامہ و معاہدہ)</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2690,7 +2690,7 @@ export default function Invoices() {
                             placeholder="e.g. 4500000"
                             value={formData.agreedAmount}
                             onChange={(e) => handleInputChange('agreedAmount', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2704,7 +2704,7 @@ export default function Invoices() {
                             placeholder="Half sum"
                             value={formData.agreedAmountHalf}
                             onChange={(e) => handleInputChange('agreedAmountHalf', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2717,7 +2717,7 @@ export default function Invoices() {
                             placeholder="e.g. Forty Five Lakh Rupees Only / پینتالیس لاکھ روپے"
                             value={formData.agreedAmountWords}
                             onChange={(e) => handleInputChange('agreedAmountWords', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2730,7 +2730,7 @@ export default function Invoices() {
                             placeholder="e.g. 03:30 PM"
                             value={formData.agreementTime}
                             onChange={(e) => handleInputChange('agreementTime', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2743,7 +2743,7 @@ export default function Invoices() {
                             placeholder="e.g. Saturday / ہفتہ"
                             value={formData.agreementDay}
                             onChange={(e) => handleInputChange('agreementDay', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
                       </div>
@@ -2753,7 +2753,7 @@ export default function Invoices() {
                   {/* TAB 6: FINANCIALS */}
                   {activeTab === 'financials' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Financial Balances & Duration</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Financial Balances & Duration</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold text-slate-300 mb-1">
@@ -2764,7 +2764,7 @@ export default function Invoices() {
                             placeholder="e.g. 4500000"
                             value={formData.totalPrice}
                             onChange={(e) => handleInputChange('totalPrice', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             required
                           />
                         </div>
@@ -2778,7 +2778,7 @@ export default function Invoices() {
                             placeholder="e.g. 500000"
                             value={formData.advanceAmount}
                             onChange={(e) => handleInputChange('advanceAmount', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2791,7 +2791,7 @@ export default function Invoices() {
                             placeholder="Auto-calculated"
                             value={formData.remainingAmount}
                             onChange={(e) => handleInputChange('remainingAmount', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
 
@@ -2804,7 +2804,7 @@ export default function Invoices() {
                             placeholder="e.g. 15 Days / 1 Month"
                             value={formData.paymentDuration}
                             onChange={(e) => handleInputChange('paymentDuration', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                            className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                           />
                         </div>
                       </div>
@@ -2814,7 +2814,7 @@ export default function Invoices() {
                   {/* TAB 7: WITNESSES */}
                   {activeTab === 'witnesses' && (
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-cyan-400 border-b border-cyan-500/20 pb-2">Witness Information (گواہان)</h3>
+                      <h3 className="text-sm font-bold text-[#c5a059] border-b border-[#c5a059]/20 pb-2">Witness Information (گواہان)</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="p-4 bg-slate-900/60 rounded-xl border border-white/5 space-y-3">
                           <h4 className="text-xs font-bold text-slate-300">Witness No. 1 (گواہ نمبر 1)</h4>
@@ -2825,7 +2825,7 @@ export default function Invoices() {
                               placeholder="Witness 1 full name"
                               value={formData.witness1Name}
                               onChange={(e) => handleInputChange('witness1Name', e.target.value)}
-                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             />
                           </div>
                           <div>
@@ -2835,7 +2835,7 @@ export default function Invoices() {
                               placeholder="CNIC / Phone number"
                               value={formData.witness1Cnic}
                               onChange={(e) => handleInputChange('witness1Cnic', e.target.value)}
-                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             />
                           </div>
                         </div>
@@ -2849,7 +2849,7 @@ export default function Invoices() {
                               placeholder="Witness 2 full name"
                               value={formData.witness2Name}
                               onChange={(e) => handleInputChange('witness2Name', e.target.value)}
-                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             />
                           </div>
                           <div>
@@ -2859,7 +2859,7 @@ export default function Invoices() {
                               placeholder="CNIC / Phone number"
                               value={formData.witness2Cnic}
                               onChange={(e) => handleInputChange('witness2Cnic', e.target.value)}
-                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-cyan-500"
+                              className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-white text-xs focus:border-[#c5a059]"
                             />
                           </div>
                         </div>
@@ -2896,7 +2896,7 @@ export default function Invoices() {
                         const idx = tabs.indexOf(activeTab);
                         if (idx < tabs.length - 1) setActiveTab(tabs[idx + 1]);
                       }}
-                      className="px-4 py-2 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/30 text-xs font-semibold flex items-center space-x-1"
+                      className="px-4 py-2 rounded-xl bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/30 hover:bg-[#c5a059]/30 text-xs font-semibold flex items-center space-x-1"
                     >
                       <span>Next Section</span>
                       <ChevronRight className="w-4 h-4" />
@@ -2906,7 +2906,7 @@ export default function Invoices() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="px-6 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs shadow-lg shadow-cyan-500/20 transition-all disabled:opacity-50"
+                    className="px-6 py-2 rounded-xl bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-white font-bold text-xs shadow-lg shadow-[#c5a059]/20 transition-all disabled:opacity-50"
                   >
                     {submitting ? 'Saving Receipt...' : 'Save & Issue Sales Receipt (سیل رسید)'}
                   </button>
@@ -2996,7 +2996,7 @@ export default function Invoices() {
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-2">
                           <button
                             onClick={() => setLightboxIndex(idx)}
-                            className="p-2 rounded-lg bg-cyan-500/80 text-white hover:bg-cyan-500 shadow"
+                            className="p-2 rounded-lg bg-[#c5a059]/80 text-white hover:bg-[#c5a059] shadow"
                             title="View Fullscreen"
                           >
                             <Eye className="w-4 h-4" />

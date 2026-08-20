@@ -288,7 +288,7 @@ export default function CurrentStock() {
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={exportStockPDF}
-            className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 border border-white/10 text-cyan-400 font-bold font-mono text-xs rounded-xl flex items-center space-x-2 transition-all"
+            className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 border border-white/10 text-[#c5a059] font-bold font-mono text-xs rounded-xl flex items-center space-x-2 transition-all"
           >
             <Download className="w-4 h-4" />
             <span>📄 Export Daily Stock PDF</span>
@@ -331,11 +331,11 @@ export default function CurrentStock() {
         <div className="glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between">
           <div>
             <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400">Total Stock Valuation</p>
-            <h3 className="text-xl font-extrabold text-cyan-400 mt-1">
+            <h3 className="text-xl font-extrabold text-[#c5a059] mt-1">
               Rs. {(stats.totalValuation || 0).toLocaleString()}
             </h3>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/20 flex items-center justify-center">
             <DollarSign className="w-5 h-5" />
           </div>
         </div>
@@ -424,7 +424,7 @@ export default function CurrentStock() {
                   </td>
 
                   <td className="py-4 px-4 font-mono">
-                    <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                    <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/20">
                       {item.careOf || 'AL Asr'}
                     </span>
                   </td>

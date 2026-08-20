@@ -152,7 +152,7 @@ export default function Reports() {
       <div className="glass-card rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
-            <Calendar className="w-4 h-4 text-cyan-400" />
+            <Calendar className="w-4 h-4 text-[#c5a059]" />
             <span>Reporting Period:</span>
           </div>
 
@@ -163,7 +163,7 @@ export default function Reports() {
                 onClick={() => setSelectedRange(range)}
                 className={`px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
                   selectedRange === range
-                    ? 'bg-cyan-500 text-black font-bold shadow-sm'
+                    ? 'bg-[#c5a059] text-black font-bold shadow-sm'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
@@ -194,7 +194,7 @@ export default function Reports() {
         <div className="flex items-center space-x-2">
           <button
             onClick={handleExportPDF}
-            className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-white/10 text-cyan-400 font-bold font-mono text-xs rounded-xl flex items-center space-x-2 transition-all"
+            className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-white/10 text-[#c5a059] font-bold font-mono text-xs rounded-xl flex items-center space-x-2 transition-all"
           >
             <Printer className="w-4 h-4" />
             <span>Export Printable PDF</span>
@@ -217,7 +217,7 @@ export default function Reports() {
             <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400">Active Sales Agents</p>
             <h3 className="text-xl font-extrabold text-white mt-0.5">{reportData.length}</h3>
           </div>
-          <div className="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center justify-center">
+          <div className="w-9 h-9 rounded-xl bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/20 flex items-center justify-center">
             <Award className="w-4 h-4" />
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function Reports() {
         <div className="glass-card rounded-2xl p-4 flex items-center justify-between border border-white/10">
           <div>
             <p className="text-[11px] font-mono uppercase tracking-wider text-slate-400">Total Assigned Leads</p>
-            <h3 className="text-xl font-extrabold text-cyan-400 mt-0.5">
+            <h3 className="text-xl font-extrabold text-[#c5a059] mt-0.5">
               {reportData.reduce((sum, r) => sum + r.totalLeads, 0)}
             </h3>
           </div>
@@ -300,7 +300,7 @@ export default function Reports() {
                     {sm.dealsClosed}
                   </td>
 
-                  <td className="py-4 px-4 font-mono text-cyan-400">
+                  <td className="py-4 px-4 font-mono text-[#c5a059]">
                     {sm.activeLeads}
                   </td>
 
@@ -308,7 +308,7 @@ export default function Reports() {
                     {sm.pendingLeads}
                   </td>
 
-                  <td className="py-4 px-4 font-mono font-extrabold text-cyan-400 text-sm">
+                  <td className="py-4 px-4 font-mono font-extrabold text-[#c5a059] text-sm">
                     Rs. {sm.totalRevenue?.toLocaleString()}
                   </td>
 
@@ -320,7 +320,7 @@ export default function Reports() {
 
                   <td className="py-4 px-4 font-mono text-slate-300">
                     <div className="flex items-center space-x-1">
-                      <Clock className="w-3.5 h-3.5 text-cyan-400" />
+                      <Clock className="w-3.5 h-3.5 text-[#c5a059]" />
                       <span>{sm.avgDealTime}</span>
                     </div>
                   </td>

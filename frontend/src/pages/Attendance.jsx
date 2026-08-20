@@ -378,7 +378,7 @@ export default function AttendancePage() {
       case 'LATE':
         return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
       case 'HALF_DAY':
-        return 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30';
+        return 'bg-[#c5a059]/10 text-[#c5a059] border-[#c5a059]/30';
       case 'LEAVE':
         return 'bg-blue-500/10 text-blue-400 border-blue-500/30';
       case 'ABSENT':
@@ -394,7 +394,7 @@ export default function AttendancePage() {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <div className="w-10 h-10 rounded-2xl bg-[#c5a059]/10 border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059]">
               <Clock className="w-5 h-5" />
             </div>
             <div>
@@ -417,7 +417,7 @@ export default function AttendancePage() {
             onClick={() => setActiveTab('daily')}
             className={`px-3.5 py-2 rounded-xl text-xs font-medium font-mono transition-all flex items-center space-x-1.5 ${
               activeTab === 'daily'
-                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30 shadow-lg'
+                ? 'bg-gradient-to-r from-[#c5a059]/20 to-blue-500/20 text-[#c5a059] border border-[#c5a059]/30 shadow-lg'
                 : 'text-slate-400 hover:text-white hover:bg-white/5'
             }`}
           >
@@ -429,7 +429,7 @@ export default function AttendancePage() {
             onClick={() => setActiveTab('roster')}
             className={`px-3.5 py-2 rounded-xl text-xs font-medium font-mono transition-all flex items-center space-x-1.5 ${
               activeTab === 'roster'
-                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30 shadow-lg'
+                ? 'bg-gradient-to-r from-[#c5a059]/20 to-blue-500/20 text-[#c5a059] border border-[#c5a059]/30 shadow-lg'
                 : 'text-slate-400 hover:text-white hover:bg-white/5'
             }`}
           >
@@ -441,7 +441,7 @@ export default function AttendancePage() {
             onClick={() => setActiveTab('history')}
             className={`px-3.5 py-2 rounded-xl text-xs font-medium font-mono transition-all flex items-center space-x-1.5 ${
               activeTab === 'history'
-                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30 shadow-lg'
+                ? 'bg-gradient-to-r from-[#c5a059]/20 to-blue-500/20 text-[#c5a059] border border-[#c5a059]/30 shadow-lg'
                 : 'text-slate-400 hover:text-white hover:bg-white/5'
             }`}
           >
@@ -453,7 +453,7 @@ export default function AttendancePage() {
             onClick={() => setActiveTab('reports')}
             className={`px-3.5 py-2 rounded-xl text-xs font-medium font-mono transition-all flex items-center space-x-1.5 ${
               activeTab === 'reports'
-                ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30 shadow-lg'
+                ? 'bg-gradient-to-r from-[#c5a059]/20 to-blue-500/20 text-[#c5a059] border border-[#c5a059]/30 shadow-lg'
                 : 'text-slate-400 hover:text-white hover:bg-white/5'
             }`}
           >
@@ -471,13 +471,13 @@ export default function AttendancePage() {
           {/* Controls Bar */}
           <div className="glass-card rounded-2xl p-4 border border-white/10 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center space-x-3">
-              <Calendar className="w-4 h-4 text-cyan-400" />
+              <Calendar className="w-4 h-4 text-[#c5a059]" />
               <span className="text-xs font-mono text-slate-300 font-bold">Select Date:</span>
               <input
                 type="date"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
-                className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
               />
             </div>
 
@@ -493,7 +493,7 @@ export default function AttendancePage() {
               <button
                 onClick={handleSaveAllDaily}
                 disabled={savingDaily}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-1.5"
+                className="px-4 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold font-mono rounded-xl text-xs shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-1.5"
               >
                 <Clock className="w-4 h-4" />
                 <span>{savingDaily ? 'Saving...' : 'Save All Attendance'}</span>
@@ -529,7 +529,7 @@ export default function AttendancePage() {
                       <tr key={emp.id} className="hover:bg-white/5 transition-colors">
                         <td className="py-3.5 px-4">
                           <div className="flex items-center space-x-2.5">
-                            <div className="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-300 font-bold flex items-center justify-center text-xs">
+                            <div className="w-8 h-8 rounded-full bg-[#c5a059]/20 text-[#dfc18b] font-bold flex items-center justify-center text-xs">
                               {emp.name.charAt(0)}
                             </div>
                             <div>
@@ -541,7 +541,7 @@ export default function AttendancePage() {
 
                         <td className="py-3.5 px-4">
                           <p className="font-semibold text-slate-200">{emp.designation}</p>
-                          <p className="text-[10px] font-mono text-cyan-400">{emp.department}</p>
+                          <p className="text-[10px] font-mono text-[#c5a059]">{emp.department}</p>
                         </td>
 
                         <td className="py-3.5 px-4">
@@ -579,7 +579,7 @@ export default function AttendancePage() {
                               value={log.checkIn || ''}
                               disabled={log.status === 'ABSENT' || log.status === 'LEAVE'}
                               onChange={(e) => handleDailyFieldChange(emp.id, 'checkIn', e.target.value)}
-                              className="bg-slate-900 border border-white/10 rounded-xl px-2 py-1 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono w-24 disabled:opacity-40"
+                              className="bg-slate-900 border border-white/10 rounded-xl px-2 py-1 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono w-24 disabled:opacity-40"
                             />
                           </div>
                         </td>
@@ -591,12 +591,12 @@ export default function AttendancePage() {
                               onClick={() => handleToggleCheckOut(emp.id)}
                               className={`px-2.5 py-1 rounded-xl text-xs font-mono font-bold border transition-all flex items-center space-x-1 ${
                                 log.checkOut && log.checkOut.trim() !== ''
-                                  ? 'bg-cyan-500/20 text-cyan-400 border-cyan-500/40 shadow-sm shadow-cyan-500/10'
+                                  ? 'bg-[#c5a059]/20 text-[#c5a059] border-[#c5a059]/40 shadow-sm shadow-[#c5a059]/10'
                                   : 'bg-slate-900 hover:bg-slate-800 text-slate-400 border-white/10'
                               }`}
                               title="Click to checklist check-out and auto-record current time"
                             >
-                              <CheckCircle2 className={`w-3.5 h-3.5 ${log.checkOut ? 'text-cyan-400' : 'text-slate-500'}`} />
+                              <CheckCircle2 className={`w-3.5 h-3.5 ${log.checkOut ? 'text-[#c5a059]' : 'text-slate-500'}`} />
                               <span>{log.checkOut ? 'Checked Out' : 'Check Out'}</span>
                             </button>
                             <input
@@ -605,7 +605,7 @@ export default function AttendancePage() {
                               value={log.checkOut || ''}
                               disabled={log.status === 'ABSENT' || log.status === 'LEAVE'}
                               onChange={(e) => handleDailyFieldChange(emp.id, 'checkOut', e.target.value)}
-                              className="bg-slate-900 border border-white/10 rounded-xl px-2 py-1 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono w-24 disabled:opacity-40"
+                              className="bg-slate-900 border border-white/10 rounded-xl px-2 py-1 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono w-24 disabled:opacity-40"
                             />
                           </div>
                         </td>
@@ -616,14 +616,14 @@ export default function AttendancePage() {
                             placeholder="Optional notes..."
                             value={log.notes}
                             onChange={(e) => handleDailyFieldChange(emp.id, 'notes', e.target.value)}
-                            className="bg-slate-900 border border-white/10 rounded-xl px-2.5 py-1 text-xs text-slate-300 focus:outline-none focus:border-cyan-500 w-full min-w-[140px]"
+                            className="bg-slate-900 border border-white/10 rounded-xl px-2.5 py-1 text-xs text-slate-300 focus:outline-none focus:border-[#c5a059] w-full min-w-[140px]"
                           />
                         </td>
 
                         <td className="py-3.5 px-4 text-right">
                           <button
                             onClick={() => handleSaveSingleDaily(emp.id)}
-                            className="px-2.5 py-1 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 rounded-lg text-[11px] font-mono font-bold transition-all"
+                            className="px-2.5 py-1 bg-[#c5a059]/20 hover:bg-[#c5a059]/30 text-[#dfc18b] border border-[#c5a059]/40 rounded-lg text-[11px] font-mono font-bold transition-all"
                           >
                             Save
                           </button>
@@ -653,13 +653,13 @@ export default function AttendancePage() {
         <div className="space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center space-x-2">
-              <Users className="w-5 h-5 text-cyan-400" />
+              <Users className="w-5 h-5 text-[#c5a059]" />
               <h3 className="text-lg font-bold text-white">Employee Roster Directory</h3>
             </div>
 
             <button
               onClick={() => handleOpenEmpModal()}
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-1.5"
+              className="px-4 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold font-mono rounded-xl text-xs shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-1.5"
             >
               <Plus className="w-4 h-4" />
               <span>Add Employee</span>
@@ -668,15 +668,15 @@ export default function AttendancePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {employees.map(emp => (
-              <div key={emp.id} className="glass-card rounded-2xl p-5 border border-white/10 hover:border-cyan-500/40 transition-all space-y-4 relative group">
+              <div key={emp.id} className="glass-card rounded-2xl p-5 border border-white/10 hover:border-[#c5a059]/40 transition-all space-y-4 relative group">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 font-extrabold text-lg flex items-center justify-center border border-cyan-500/30">
+                    <div className="w-12 h-12 rounded-2xl bg-[#c5a059]/20 text-[#dfc18b] font-extrabold text-lg flex items-center justify-center border border-[#c5a059]/30">
                       {emp.name.charAt(0)}
                     </div>
                     <div>
                       <h4 className="font-extrabold text-white text-base">{emp.name}</h4>
-                      <p className="text-xs font-semibold text-cyan-400">{emp.designation}</p>
+                      <p className="text-xs font-semibold text-[#c5a059]">{emp.designation}</p>
                       <p className="text-[10px] font-mono text-slate-400">{emp.department} Dept</p>
                     </div>
                   </div>
@@ -699,7 +699,7 @@ export default function AttendancePage() {
                 <div className="flex items-center justify-end space-x-2 pt-3 border-t border-white/5">
                   <button
                     onClick={() => handleOpenEmpModal(emp)}
-                    className="p-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 transition-colors"
+                    className="p-1.5 rounded-lg bg-[#c5a059]/10 hover:bg-[#c5a059]/20 text-[#dfc18b] transition-colors"
                     title="Edit employee"
                   >
                     <Edit className="w-4 h-4" />
@@ -738,7 +738,7 @@ export default function AttendancePage() {
                   type="date"
                   value={historyStartDate}
                   onChange={(e) => setHistoryStartDate(e.target.value)}
-                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -748,7 +748,7 @@ export default function AttendancePage() {
                   type="date"
                   value={historyEndDate}
                   onChange={(e) => setHistoryEndDate(e.target.value)}
-                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 />
               </div>
 
@@ -757,7 +757,7 @@ export default function AttendancePage() {
                 <select
                   value={historyEmpFilter}
                   onChange={(e) => setHistoryEmpFilter(e.target.value)}
-                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="">All Employees</option>
                   {employees.map(e => (
@@ -769,7 +769,7 @@ export default function AttendancePage() {
 
             <button
               onClick={fetchHistoryAttendance}
-              className="px-3.5 py-1.5 bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 rounded-xl text-xs font-mono font-bold hover:bg-cyan-500/30 transition-all"
+              className="px-3.5 py-1.5 bg-[#c5a059]/20 text-[#dfc18b] border border-[#c5a059]/40 rounded-xl text-xs font-mono font-bold hover:bg-[#c5a059]/30 transition-all"
             >
               Refresh Logs
             </button>
@@ -795,7 +795,7 @@ export default function AttendancePage() {
                 <tbody className="divide-y divide-white/5 text-xs">
                   {historyLogs.map((log) => (
                     <tr key={log.id} className="hover:bg-white/5 transition-colors font-mono">
-                      <td className="py-3.5 px-4 text-cyan-300 font-bold">
+                      <td className="py-3.5 px-4 text-[#dfc18b] font-bold">
                         {new Date(log.date).toLocaleDateString()}
                       </td>
 
@@ -868,7 +868,7 @@ export default function AttendancePage() {
                 <select
                   value={reportType}
                   onChange={(e) => setReportType(e.target.value)}
-                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="weekly">Weekly Report (Last 7 Days)</option>
                   <option value="monthly">Monthly Report (This Month)</option>
@@ -882,14 +882,14 @@ export default function AttendancePage() {
                     type="date"
                     value={reportStartDate}
                     onChange={(e) => setReportStartDate(e.target.value)}
-                    className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                   <span className="text-xs font-mono text-slate-400">to</span>
                   <input
                     type="date"
                     value={reportEndDate}
                     onChange={(e) => setReportEndDate(e.target.value)}
-                    className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </>
               )}
@@ -899,7 +899,7 @@ export default function AttendancePage() {
                 <select
                   value={reportEmpFilter}
                   onChange={(e) => setReportEmpFilter(e.target.value)}
-                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="bg-slate-900 border border-white/10 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="">All Employees</option>
                   {employees.map(e => (
@@ -946,7 +946,7 @@ export default function AttendancePage() {
 
                 <div className="glass-card rounded-2xl p-4 border border-white/10">
                   <p className="text-xs font-mono text-slate-400 uppercase">Total Hours Worked</p>
-                  <p className="text-2xl font-extrabold text-cyan-400 mt-1">
+                  <p className="text-2xl font-extrabold text-[#c5a059] mt-1">
                     {reportData.reports.reduce((sum, r) => sum + r.summary.totalHours, 0).toFixed(1)} hrs
                   </p>
                 </div>
@@ -981,7 +981,7 @@ export default function AttendancePage() {
                         <tr key={rep.employee.id} className="hover:bg-white/5 transition-colors">
                           <td className="py-3.5 px-4">
                             <p className="font-bold text-white text-sm">{rep.employee.name}</p>
-                            <p className="text-[10px] font-mono text-cyan-400">{rep.employee.designation}</p>
+                            <p className="text-[10px] font-mono text-[#c5a059]">{rep.employee.designation}</p>
                           </td>
 
                           <td className="py-3.5 px-4 font-mono text-slate-300">
@@ -996,7 +996,7 @@ export default function AttendancePage() {
                             {rep.summary.lateDays}
                           </td>
 
-                          <td className="py-3.5 px-4 text-center font-mono font-bold text-cyan-400">
+                          <td className="py-3.5 px-4 text-center font-mono font-bold text-[#c5a059]">
                             {rep.summary.halfDays}
                           </td>
 
@@ -1016,11 +1016,11 @@ export default function AttendancePage() {
                             <div className="flex items-center justify-end space-x-2">
                               <div className="w-16 bg-slate-800 rounded-full h-2 overflow-hidden">
                                 <div
-                                  className="bg-gradient-to-r from-cyan-500 to-emerald-400 h-full rounded-full"
+                                  className="bg-gradient-to-r from-[#c5a059] to-emerald-400 h-full rounded-full"
                                   style={{ width: `${rep.summary.attendanceRate}%` }}
                                 ></div>
                               </div>
-                              <span className="font-mono font-bold text-cyan-400 text-xs w-9 text-right">
+                              <span className="font-mono font-bold text-[#c5a059] text-xs w-9 text-right">
                                 {rep.summary.attendanceRate}%
                               </span>
                             </div>
@@ -1052,7 +1052,7 @@ export default function AttendancePage() {
           <div className="glass-modal rounded-3xl p-6 w-full max-w-lg border border-white/10 shadow-2xl my-8">
             <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
               <div className="flex items-center space-x-2">
-                <Users className="w-6 h-6 text-cyan-400" />
+                <Users className="w-6 h-6 text-[#c5a059]" />
                 <h3 className="text-xl font-bold text-white">
                   {editingEmp ? `Edit Employee (${editingEmp.name})` : 'Add New Employee'}
                 </h3>
@@ -1074,7 +1074,7 @@ export default function AttendancePage() {
                   placeholder="e.g. Ali Raza"
                   value={empForm.name}
                   onChange={(e) => setEmpForm({ ...empForm, name: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                 />
               </div>
 
@@ -1086,7 +1086,7 @@ export default function AttendancePage() {
                     placeholder="e.g. Senior Sales Manager"
                     value={empForm.designation}
                     onChange={(e) => setEmpForm({ ...empForm, designation: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059]"
                   />
                 </div>
 
@@ -1095,7 +1095,7 @@ export default function AttendancePage() {
                   <select
                     value={empForm.department}
                     onChange={(e) => setEmpForm({ ...empForm, department: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   >
                     <option value="Sales">Sales</option>
                     <option value="Accounts">Accounts</option>
@@ -1114,7 +1114,7 @@ export default function AttendancePage() {
                     placeholder="e.g. +92 300 1234567"
                     value={empForm.phone}
                     onChange={(e) => setEmpForm({ ...empForm, phone: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </div>
 
@@ -1125,7 +1125,7 @@ export default function AttendancePage() {
                     placeholder="e.g. ali@alasrmotors.com"
                     value={empForm.email}
                     onChange={(e) => setEmpForm({ ...empForm, email: e.target.value })}
-                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                    className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                   />
                 </div>
               </div>
@@ -1135,7 +1135,7 @@ export default function AttendancePage() {
                 <select
                   value={empForm.userId}
                   onChange={(e) => setEmpForm({ ...empForm, userId: e.target.value })}
-                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan-500 font-mono"
+                  className="w-full bg-slate-900 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-[#c5a059] font-mono"
                 >
                   <option value="">None (Standalone Employee Entry)</option>
                   {systemUsers.map(u => (
@@ -1154,7 +1154,7 @@ export default function AttendancePage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-1.5"
+                  className="px-5 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold font-mono text-xs rounded-xl shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-1.5"
                 >
                   <UserCheck className="w-4 h-4" />
                   <span>{editingEmp ? 'Update Employee' : 'Create Employee'}</span>
