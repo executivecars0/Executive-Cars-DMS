@@ -29,7 +29,7 @@ async function main() {
       email: adminEmail,
       phone: adminPhone,
       password: hashedAdminPassword,
-      role: 'ADMIN',
+      role: 'SUPER_ADMIN',
       status: 'ACTIVE'
     }
   });
