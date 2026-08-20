@@ -64,19 +64,19 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileOpen, setIs
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed lg:sticky top-0 left-0 h-screen w-64 bg-[#051424]/95 border-r border-white/10 flex flex-col justify-between backdrop-blur-2xl z-50 transition-transform duration-300 ${
+        className={`fixed lg:sticky top-0 left-0 h-screen w-64 bg-[#09090b]/95 border-r border-white/10 flex flex-col justify-between backdrop-blur-2xl z-50 transition-transform duration-300 ${
           isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
         {/* Brand Logo Header */}
         <div className="p-4 border-b border-white/5 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center space-x-3">
-            <div className="w-14 h-14 rounded-2xl bg-transparent flex items-center justify-center overflow-hidden flex-shrink-0">
-              <img src="/logo.png" alt="AL ASR MOTORS" className="w-full h-full object-contain filter drop-shadow-lg" />
+            <div className="w-12 h-12 rounded-2xl bg-transparent flex items-center justify-center overflow-hidden flex-shrink-0">
+              <img src="/logo.png" alt="Executive Cars" className="w-full h-full object-contain filter drop-shadow-lg" />
             </div>
             <div>
-              <h1 className="text-lg font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-200 to-cyan-400 bg-clip-text text-transparent">
-                AL ASR <span className="text-cyan-400 text-xs font-mono font-normal">MOTORS</span>
+              <h1 className="text-lg font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-200 to-[#c5a059] bg-clip-text text-transparent">
+                EXECUTIVE <span className="text-[#c5a059] text-xs font-mono font-normal">CARS</span>
               </h1>
               <p className="text-[10px] text-slate-400 font-mono">Dealership Management</p>
             </div>
@@ -94,8 +94,8 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileOpen, setIs
         {/* User Role Card */}
         <div className="px-3 py-3 border-b border-white/5 flex-shrink-0">
           <div className="glass-card rounded-xl p-2.5 flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 flex items-center justify-center font-bold text-xs">
-              {user?.name?.charAt(0) || 'A'}
+            <div className="w-8 h-8 rounded-full bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/40 flex items-center justify-center font-bold text-xs">
+              {user?.name?.charAt(0) || 'E'}
             </div>
             <div className="overflow-hidden flex-1">
               <p className="text-xs font-semibold text-white truncate">{user?.name}</p>
@@ -105,7 +105,7 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileOpen, setIs
                     <Crown className="w-2.5 h-2.5 mr-1" /> SUPER ADMIN
                   </span>
                 ) : isAdmin ? (
-                  <span className="inline-flex items-center text-[9px] font-mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/30">
+                  <span className="inline-flex items-center text-[9px] font-mono text-[#c5a059] bg-[#c5a059]/10 px-1.5 py-0.5 rounded border border-[#c5a059]/30">
                     <Shield className="w-2.5 h-2.5 mr-1" /> ADMIN
                   </span>
                 ) : (
@@ -129,14 +129,14 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileOpen, setIs
                 onClick={() => handleNavClick(item.id)}
                 className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl font-medium text-xs transition-all duration-200 group relative ${
                   isActive
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/10 text-cyan-400 border border-cyan-500/30 shadow-lg shadow-cyan-500/5'
+                    ? 'bg-gradient-to-r from-[#c5a059]/20 to-[#9a7a47]/10 text-[#c5a059] border border-[#c5a059]/30 shadow-lg shadow-[#c5a059]/5'
                     : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {isActive && (
-                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-6 bg-cyan-400 rounded-r-full shadow-glow"></span>
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-6 bg-[#c5a059] rounded-r-full shadow-glow"></span>
                 )}
-                <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-cyan-400' : 'text-slate-400 group-hover:text-slate-200'}`} />
+                <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-[#c5a059]' : 'text-slate-400 group-hover:text-slate-200'}`} />
                 <span className="truncate">{item.label}</span>
               </button>
             );
@@ -144,7 +144,7 @@ export default function Sidebar({ currentTab, setCurrentTab, isMobileOpen, setIs
         </nav>
 
         {/* Logout Footer - Always Pinned at Bottom */}
-        <div className="p-3 border-t border-white/5 flex-shrink-0 bg-[#051424]">
+        <div className="p-3 border-t border-white/5 flex-shrink-0 bg-[#09090b]">
           <button
             onClick={logout}
             className="w-full flex items-center justify-center space-x-2 px-3 py-2 rounded-xl border border-rose-500/30 bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all text-xs font-bold shadow-sm"

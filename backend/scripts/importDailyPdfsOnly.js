@@ -50,7 +50,7 @@ async function processDailyPdfsOnly() {
   console.log('====================================================');
 
   // 1. Process Daily Seller PDF
-  const sellerPdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf');
+  const sellerPdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf');
   if (fs.existsSync(sellerPdfPath)) {
     console.log('\n📄 Extracting dates from: Daily Seller PDF...');
     const fileBuf = new Uint8Array(fs.readFileSync(sellerPdfPath));
@@ -113,7 +113,7 @@ async function processDailyPdfsOnly() {
   }
 
   // 2. Process Daily Buyer PDF
-  const buyerPdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf');
+  const buyerPdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf');
   if (fs.existsSync(buyerPdfPath)) {
     console.log('\n📄 Extracting dates from: Daily Buyer PDF...');
     const fileBuf = new Uint8Array(fs.readFileSync(buyerPdfPath));

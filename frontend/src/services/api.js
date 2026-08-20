@@ -3,7 +3,7 @@ if (rawBaseUrl !== '/api' && !rawBaseUrl.endsWith('/api')) {
   rawBaseUrl += '/api';
 }
 const API_BASE = rawBaseUrl;
-console.log('🔗 AL ASR DMS connecting to Backend API at:', API_BASE);
+console.log('🔗 Executive Cars DMS connecting to Backend API at:', API_BASE);
 
 const getHeaders = (isMultipart = false) => {
   const token = localStorage.getItem('dms_token');

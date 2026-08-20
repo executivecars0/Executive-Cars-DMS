@@ -7,10 +7,10 @@ const bcrypt = require('bcryptjs');
 const prisma = new PrismaClient();
 
 const pdfFiles = {
-  mainBuyer: path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Main Buyer.pdf'),
-  dailyBuyer: path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf'),
-  mainSeller: path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Main Seller.pdf'),
-  dailySeller: path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf')
+  mainBuyer: path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Main Buyer.pdf'),
+  dailyBuyer: path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf'),
+  mainSeller: path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Main Seller.pdf'),
+  dailySeller: path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf')
 };
 
 // Helper to parse price strings like "45 Lac", "1 Crore 10 Lac", "40-41.5 Lac", etc.
@@ -441,7 +441,7 @@ async function main() {
     const hashedPassword = await bcrypt.hash('Admin123!', 10);
     admin = await prisma.user.create({
       data: {
-        name: 'AL ASR Administrator',
+        name: 'Executive Cars Administrator',
         email: 'admin@dealership.com',
         phone: '+92 300 1234567',
         password: hashedPassword,

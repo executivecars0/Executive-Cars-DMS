@@ -15,7 +15,7 @@ async function main() {
   await prisma.buyer.deleteMany();
   await prisma.user.deleteMany();
 
-  const adminName = process.env.ADMIN_NAME || 'AL ASR Administrator';
+  const adminName = process.env.ADMIN_NAME || 'Executive Cars Administrator';
   const adminEmail = process.env.ADMIN_EMAIL || 'admin@dealership.com';
   const adminPassword = process.env.ADMIN_PASSWORD || 'Admin123!';
   const adminPhone = process.env.ADMIN_PHONE || '+92 300 1234567';
@@ -39,7 +39,7 @@ async function main() {
     data: {
       userId: admin.id,
       action: 'SYSTEM_CLEAN_INIT',
-      details: `Initialized clean AL ASR Dealership system. Default Admin created (${admin.email}).`
+      details: `Initialized clean Executive Cars Dealership system. Default Admin created (${admin.email}).`
     }
   });
 

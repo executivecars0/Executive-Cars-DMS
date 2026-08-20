@@ -4,8 +4,8 @@ const { PDFParse } = require('pdf-parse');
 
 async function diagnoseDailyPdfs() {
   const dailyPdfs = [
-    'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf',
-    'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf'
+    'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf',
+    'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf'
   ];
 
   for (const pdfName of dailyPdfs) {

@@ -31,10 +31,10 @@ function MainLayout() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#051424] flex items-center justify-center text-cyan-400 font-mono">
+      <div className="min-h-screen bg-[#09090b] flex items-center justify-center text-[#c5a059] font-mono">
         <div className="flex items-center space-x-3">
-          <div className="w-6 h-6 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <span>Initializing AL ASR MOTORS Workspace...</span>
+          <div className="w-6 h-6 border-2 border-[#c5a059] border-t-transparent rounded-full animate-spin"></div>
+          <span>Initializing Executive Cars Workspace...</span>
         </div>
       </div>
     );
@@ -58,7 +58,7 @@ function MainLayout() {
   };
 
   return (
-    <div className="flex min-h-screen bg-[#051424]">
+    <div className="flex min-h-screen bg-[#09090b]">
       {/* Sidebar Navigation Rail */}
       <Sidebar
         currentTab={currentTab}

@@ -137,7 +137,7 @@ export default function CurrentStock() {
     });
   };
 
-  // Daily Printable PDF Exporter with AL ASR Logo
+  // Daily Printable PDF Exporter with Executive Cars Logo
   const exportStockPDF = () => {
     const printWindow = window.open('', '_blank');
     const todayStr = new Date().toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
@@ -154,7 +154,7 @@ export default function CurrentStock() {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>AL ASR MOTORS - Showroom Current Stock (${todayStr})</title>
+          <title>EXECUTIVE CARS - Showroom Current Stock (${todayStr})</title>
           <style>
             @page { size: portrait; margin: 4mm 6mm; }
             * { box-sizing: border-box; }
@@ -198,9 +198,9 @@ export default function CurrentStock() {
                 <div>
                   <div class="header">
                     <div class="logo-box">
-                      <img src="${logoBase64}" alt="AL ASR MOTORS" style="height: 36px; width: auto; object-fit: contain;" />
+                      <img src="${logoBase64}" alt="EXECUTIVE CARS" style="height: 36px; width: auto; object-fit: contain;" />
                       <div>
-                        <div class="title">AL ASR MOTORS — SHOWROOM CURRENT STOCK</div>
+                        <div class="title">EXECUTIVE CARS — SHOWROOM CURRENT STOCK</div>
                         <div class="subtitle">Official Floor Stock Inventory • Generated: ${todayStr} • Sahiwal, Pakistan</div>
                       </div>
                     </div>
@@ -252,7 +252,7 @@ export default function CurrentStock() {
                 </div>
 
                 <div class="footer">
-                  AL ASR MOTORS Dealership Executive System • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${stockList.length} (25 entries per sheet)
+                  EXECUTIVE CARS Dealership Executive System • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${stockList.length} (25 entries per sheet)
                 </div>
               </div>
             `;

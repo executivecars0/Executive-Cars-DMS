@@ -349,7 +349,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
       <!DOCTYPE html>
       <html>
         <head>
-          <title>AL ASR MOTORS - Buyer Inquiries Report (${todayStr})</title>
+          <title>EXECUTIVE CARS - Buyer Inquiries Report (${todayStr})</title>
           <style>
             @page { size: portrait; margin: 4mm 6mm; }
             * { box-sizing: border-box; }
@@ -392,9 +392,9 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                 <div>
                   <div class="header">
                     <div class="logo-box">
-                      <img src="${logoBase64}" alt="AL ASR MOTORS" style="height: 36px; width: auto; object-fit: contain;" />
+                      <img src="${logoBase64}" alt="EXECUTIVE CARS" style="height: 36px; width: auto; object-fit: contain;" />
                       <div>
-                        <div class="title">AL ASR MOTORS — BUYER INQUIRIES & BANK CASES</div>
+                        <div class="title">EXECUTIVE CARS — BUYER INQUIRIES & BANK CASES</div>
                         <div class="subtitle">Filtered Buyer Export • Generated: ${todayStr} • Sahiwal, Pakistan</div>
                       </div>
                     </div>
@@ -449,7 +449,7 @@ export default function Buyers({ search, isAddModalOpen, setIsAddModalOpen, scop
                 </div>
 
                 <div class="footer">
-                  AL ASR MOTORS Customer Care & Sales • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${displayBuyers.length} (25 entries per sheet)
+                  EXECUTIVE CARS Customer Care & Sales • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${displayBuyers.length} (25 entries per sheet)
                 </div>
               </div>
             `;

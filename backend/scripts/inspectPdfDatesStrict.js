@@ -4,8 +4,8 @@ const { PDFParse } = require('pdf-parse');
 
 async function inspectSellerPdfs() {
   const sellerPdfs = [
-    'AL ASR Motors_ Inventory Management Sheet - Main Seller.pdf',
-    'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf'
+    'Executive Cars_ Inventory Management Sheet - Main Seller.pdf',
+    'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf'
   ];
 
   for (const file of sellerPdfs) {

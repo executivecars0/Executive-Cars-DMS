@@ -6,9 +6,9 @@ const bcrypt = require('bcryptjs');
 
 const prisma = new PrismaClient();
 
-const mainBuyerPdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Main Buyer.pdf');
-const dailyBuyerPdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf');
-const dailySellerPdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf');
+const mainBuyerPdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Main Buyer.pdf');
+const dailyBuyerPdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf');
+const dailySellerPdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf');
 
 function parseDemandPrice(priceStr) {
   if (!priceStr) return 0;
@@ -305,7 +305,7 @@ async function runImport() {
     const hashedPassword = await bcrypt.hash('Admin123!', 10);
     admin = await prisma.user.create({
       data: {
-        name: 'AL ASR Administrator',
+        name: 'Executive Cars Administrator',
         email: 'admin@dealership.com',
         phone: '+92 300 1234567',
         password: hashedPassword,

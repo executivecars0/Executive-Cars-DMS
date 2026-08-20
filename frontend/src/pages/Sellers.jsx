@@ -265,7 +265,7 @@ export default function Sellers({ search, isAddModalOpen, setIsAddModalOpen, sco
       <!DOCTYPE html>
       <html>
         <head>
-          <title>AL ASR MOTORS - Seller Inventory Export (${todayStr})</title>
+          <title>EXECUTIVE CARS - Seller Inventory Export (${todayStr})</title>
           <style>
             @page { size: portrait; margin: 4mm 6mm; }
             * { box-sizing: border-box; }
@@ -307,9 +307,9 @@ export default function Sellers({ search, isAddModalOpen, setIsAddModalOpen, sco
                 <div>
                   <div class="header">
                     <div class="logo-title">
-                      <img src="${logoBase64}" alt="AL ASR MOTORS" style="height: 36px; width: auto; object-fit: contain;" />
+                      <img src="${logoBase64}" alt="EXECUTIVE CARS" style="height: 36px; width: auto; object-fit: contain;" />
                       <div>
-                        <div class="title">AL ASR MOTORS — SELLERS INVENTORY REPORT</div>
+                        <div class="title">EXECUTIVE CARS — SELLERS INVENTORY REPORT</div>
                         <div class="subtitle">Filtered Stock Export • Generated: ${todayStr} • Sahiwal, Pakistan</div>
                       </div>
                     </div>
@@ -361,7 +361,7 @@ export default function Sellers({ search, isAddModalOpen, setIsAddModalOpen, sco
                 </div>
 
                 <div class="footer">
-                  AL ASR MOTORS Dealership System • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${sellers.length} (25 entries per sheet)
+                  EXECUTIVE CARS Dealership System • Sheet ${pageIdx + 1} of ${totalPages} • Showing records ${chunk.length > 0 ? startIdx + 1 : 0} to ${startIdx + chunk.length} of ${sellers.length} (25 entries per sheet)
                 </div>
               </div>
             `;

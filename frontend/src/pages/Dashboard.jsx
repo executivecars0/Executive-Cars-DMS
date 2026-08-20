@@ -34,7 +34,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
       const data = await api.getDashboardStats();
       setStats(data);
     } catch (err) {
-      console.error('Failed to load AL ASR dashboard metrics:', err);
+      console.error('Failed to load Executive Cars dashboard metrics:', err);
     } finally {
       setLoading(false);
     }
@@ -43,9 +43,9 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
   if (loading) {
     return (
       <div className="p-8 flex items-center justify-center min-h-[600px]">
-        <div className="flex items-center space-x-3 text-cyan-400 font-mono text-sm">
-          <div className="w-5 h-5 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <span>Loading AL ASR Operations Hub...</span>
+        <div className="flex items-center space-x-3 text-[#c5a059] font-mono text-sm">
+          <div className="w-5 h-5 border-2 border-[#c5a059] border-t-transparent rounded-full animate-spin"></div>
+          <span>Loading Executive Cars Operations Hub...</span>
         </div>
       </div>
     );
@@ -56,19 +56,19 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
   return (
     <div className="p-4 sm:p-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto">
       {/* Welcome Banner */}
-      <div className="glass-card rounded-3xl p-6 relative overflow-hidden bg-gradient-to-r from-slate-900/90 via-[#0d1c2d] to-cyan-950/40 border border-cyan-500/20">
+      <div className="glass-card rounded-3xl p-6 relative overflow-hidden bg-gradient-to-r from-slate-900/90 via-[#141417] to-[#1d1d22] border border-[#c5a059]/20">
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-2">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#c5a059]/10 border border-[#c5a059]/30 text-[#c5a059] text-xs font-mono mb-2">
               <Activity className="w-3.5 h-3.5" />
-              <span>AL ASR Motors Operational Hub</span>
+              <span>Executive Cars Operational Hub</span>
             </div>
             <h1 className="text-2xl font-extrabold text-white">
-              Welcome back, <span className="text-cyan-400">{user?.name}</span>!
+              Welcome back, <span className="text-[#c5a059]">{user?.name}</span>!
             </h1>
             <p className="text-xs text-slate-300 mt-1 max-w-xl">
               {isAdmin 
-                ? 'Here is your AL ASR dealership overview. Track sales pipeline, PKR revenue, top salesmen performance, and active vehicle inventory.'
+                ? 'Here is your Executive Cars dealership overview. Track sales pipeline, PKR revenue, top salesmen performance, and active vehicle inventory.'
                 : 'Here is your personal sales pipeline summary. Manage your assigned seller leads, buyer inquiries, and closed transactions.'}
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Dashboard({ onNavigate, onOpenModal }) {
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => onOpenModal('seller')}
-                className="px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-2"
+                className="px-4 py-2.5 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-extrabold rounded-xl text-xs shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-2"
               >
                 <Car className="w-4 h-4" />
                 <span>+ Add Seller Vehicle</span>

@@ -43,19 +43,19 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#051424] flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-[#09090b] flex items-center justify-center p-4 relative overflow-hidden">
       {/* Dynamic Background Glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c5a059]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#9a7a47]/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Brand Header */}
         <div className="text-center mb-8">
-          <div className="w-28 h-28 mx-auto flex items-center justify-center overflow-hidden mb-3 filter drop-shadow-2xl">
-            <img src="/logo.png" alt="AL ASR MOTORS" className="w-full h-full object-contain" />
+          <div className="w-24 h-24 mx-auto flex items-center justify-center overflow-hidden mb-3 filter drop-shadow-2xl">
+            <img src="/logo.png" alt="Executive Cars" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-white font-sans">
-            AL ASR <span className="text-cyan-400 font-mono">MOTORS</span>
+            EXECUTIVE <span className="text-[#c5a059] font-mono">CARS</span>
           </h1>
           <p className="text-xs text-slate-400 font-mono mt-1">Dealership Management System</p>
         </div>
@@ -63,7 +63,7 @@ export default function Login() {
         {/* Auth Glass Card */}
         <div className="glass-modal rounded-3xl p-8 border border-white/10 shadow-2xl">
           <h2 className="text-xl font-bold text-white mb-1">
-            {isRegistering ? 'Salesman Account Request' : 'Sign in to AL ASR Workspace'}
+            {isRegistering ? 'Salesman Account Request' : 'Sign in to Executive Cars Workspace'}
           </h2>
           <p className="text-xs text-slate-400 mb-6">
             {isRegistering 
@@ -96,7 +96,7 @@ export default function Login() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Muhammad Tariq"
-                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors"
+                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors"
                     />
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Login() {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+92 300 0000000"
-                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors font-mono"
+                      className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors font-mono"
                     />
                   </div>
                 </div>
@@ -126,8 +126,8 @@ export default function Login() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@dealership.com"
-                  className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors font-mono"
+                  placeholder="admin@executivecars.com"
+                  className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors font-mono"
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors font-mono"
+                  className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-sm text-white focus:outline-none focus:border-[#c5a059] transition-colors font-mono"
                 />
                 <button
                   type="button"
@@ -158,7 +158,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold rounded-xl text-sm shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center space-x-2 mt-2"
+              className="w-full py-3 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-extrabold rounded-xl text-sm shadow-lg shadow-[#c5a059]/25 transition-all flex items-center justify-center space-x-2 mt-2"
             >
               <span>{loading ? 'Processing...' : isRegistering ? 'Submit Registration' : 'Access System'}</span>
               <ArrowRight className="w-4 h-4" />
@@ -174,7 +174,7 @@ export default function Login() {
                 setError('');
                 setSuccess('');
               }}
-              className="text-xs text-slate-400 hover:text-cyan-400 transition-colors font-mono underline"
+              className="text-xs text-slate-400 hover:text-[#c5a059] transition-colors font-mono underline"
             >
               {isRegistering ? '← Back to Sign In' : 'New Salesman? Request access here →'}
             </button>

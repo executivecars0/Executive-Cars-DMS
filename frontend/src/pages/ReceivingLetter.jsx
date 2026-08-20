@@ -219,7 +219,7 @@ export default function ReceivingLetterPage() {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>AL ASR MOTORS — Receiving Letter (${letter.letterNumber})</title>
+          <title>EXECUTIVE CARS — Receiving Letter (${letter.letterNumber})</title>
           <style>
             @page { size: portrait; margin: 8mm 10mm; }
             * { box-sizing: border-box; }
@@ -250,7 +250,7 @@ export default function ReceivingLetterPage() {
                   <img src="${logoBase64}" style="height: 55px; width: auto; object-fit: contain;" />
                 </td>
                 <td class="title-cell">
-                  <div class="company-name">AL-ASR MOTORS</div>
+                  <div class="company-name">EXECUTIVE CARS</div>
                   <div class="company-sub">Showroom & Dealership Management</div>
                 </td>
                 <td class="ref-cell">
@@ -295,7 +295,7 @@ export default function ReceivingLetterPage() {
               </tr>
               <tr>
                 <td>
-                  <div class="label">Receiver Name (AL-ASR Representative)</div>
+                  <div class="label">Receiver Name (Executive Cars Representative)</div>
                   <div class="val" style="color: #047857;">${letter.receiverName}</div>
                 </td>
                 <td>
@@ -323,7 +323,7 @@ export default function ReceivingLetterPage() {
 
             <div class="notes-box">
               <div class="label" style="color: #0f172a; margin-bottom: 4px;">Receiving Details & Vehicle Condition Notes:</div>
-              <div style="font-size: 11px; color: #334155; white-space: pre-wrap;">${letter.notes || 'Vehicle received in good condition with listed accessories and documents as per AL-ASR Motors receiving policy.'}</div>
+              <div style="font-size: 11px; color: #334155; white-space: pre-wrap;">${letter.notes || 'Vehicle received in good condition with listed accessories and documents as per Executive Cars receiving policy.'}</div>
             </div>
 
             <div class="signatures">
@@ -333,12 +333,12 @@ export default function ReceivingLetterPage() {
               </div>
               <div class="sig-box">
                 Receiver Signature & Stamp<br/>
-                <span style="font-size: 10px; color: #0284c7; font-weight: normal;">(${letter.receiverName} — AL-ASR MOTORS)</span>
+                <span style="font-size: 10px; color: #0284c7; font-weight: normal;">(${letter.receiverName} — EXECUTIVE CARS)</span>
               </div>
             </div>
 
             <div class="footer-text">
-              AL-ASR MOTORS • Official Vehicle Handover Receiving Copy • Generated on ${new Date().toLocaleString()}
+              EXECUTIVE CARS • Official Vehicle Handover Receiving Copy • Generated on ${new Date().toLocaleString()}
             </div>
           </div>
           <script>
@@ -368,7 +368,7 @@ export default function ReceivingLetterPage() {
             Showroom Vehicle Receiving Letters
           </h1>
           <p className="text-xs text-slate-400 font-mono mt-0.5">
-            Create, manage, attach pictures, and print official vehicle receiving letters for AL-ASR Motors.
+            Create, manage, attach pictures, and print official vehicle receiving letters for Executive Cars.
           </p>
         </div>
 
@@ -506,7 +506,7 @@ export default function ReceivingLetterPage() {
               <div className="flex items-center space-x-2">
                 <FileCheck className="w-6 h-6 text-emerald-400" />
                 <h3 className="text-xl font-bold text-white">
-                  {editingLetter ? `Edit Receiving Letter (${editingLetter.letterNumber})` : 'Create Receiving Letter – AL-ASR MOTORS'}
+                  {editingLetter ? `Edit Receiving Letter (${editingLetter.letterNumber})` : 'Create Receiving Letter – EXECUTIVE CARS'}
                 </h3>
               </div>
               <button

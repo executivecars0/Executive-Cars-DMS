@@ -19,7 +19,7 @@ async function main() {
   } else {
     superAdmin = await prisma.user.create({
       data: {
-        name: 'AL ASR Super Administrator',
+        name: 'Executive Cars Super Administrator',
         email: 'superadmin@alasrmotors.com',
         phone: '+92 300 1111111',
         password: hashedPassword,
@@ -45,7 +45,7 @@ async function main() {
   } else {
     admin = await prisma.user.create({
       data: {
-        name: 'AL ASR Standard Admin',
+        name: 'Executive Cars Standard Admin',
         email: 'admin@alasrmotors.com',
         phone: '+92 300 2222222',
         password: hashedPassword,

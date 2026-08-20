@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const prisma = new PrismaClient();
 
-const pdfPath = 'C:\\Users\\cc\\Desktop\\AL ASR Motors_ Inventory Management Sheet - Main Seller.pdf';
+const pdfPath = 'C:\\Users\\cc\\Desktop\\Executive Cars_ Inventory Management Sheet - Main Seller.pdf';
 
 function parseDemandPrice(priceStr) {
   if (!priceStr) return 0;
@@ -119,7 +119,7 @@ async function main() {
     const hashedPassword = await bcrypt.hash('Admin123!', 10);
     admin = await prisma.user.create({
       data: {
-        name: 'AL ASR Administrator',
+        name: 'Executive Cars Administrator',
         email: 'admin@dealership.com',
         phone: '+92 300 1234567',
         password: hashedPassword,

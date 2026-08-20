@@ -6,10 +6,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const pdfFiles = {
-  mainBuyer: 'AL ASR Motors_ Inventory Management Sheet - Main Buyer.pdf',
-  dailyBuyer: 'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf',
-  mainSeller: 'AL ASR Motors_ Inventory Management Sheet - Main Seller.pdf',
-  dailySeller: 'AL ASR Motors_ Inventory Management Sheet - Daily Seller.pdf'
+  mainBuyer: 'Executive Cars_ Inventory Management Sheet - Main Buyer.pdf',
+  dailyBuyer: 'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf',
+  mainSeller: 'Executive Cars_ Inventory Management Sheet - Main Seller.pdf',
+  dailySeller: 'Executive Cars_ Inventory Management Sheet - Daily Seller.pdf'
 };
 
 function normalizeSalesmanName(rawName) {

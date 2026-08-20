@@ -18,26 +18,26 @@ body {
 
 @layer utilities {
   .glass-card {
-    background: rgba(18, 33, 49, 0.75);
+    background: rgba(20, 20, 23, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(197, 160, 89, 0.12);
   }
   
   .glass-card-hover {
     transition: all 0.2s ease-in-out;
   }
   .glass-card-hover:hover {
-    background: rgba(28, 43, 60, 0.85);
-    border-color: rgba(0, 209, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 209, 255, 0.1);
+    background: rgba(29, 29, 34, 0.9);
+    border-color: rgba(197, 160, 89, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(197, 160, 89, 0.12);
   }
 
   .glass-modal {
-    background: rgba(13, 28, 45, 0.95);
+    background: rgba(15, 15, 18, 0.96);
     backdrop-filter: blur(24px);
-    border: 1px solid rgba(0, 209, 255, 0.2);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -48,14 +48,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #051424;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1c2b3c;
+  background: #27272f;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00d1ff;
+  background: #c5a059;
 }

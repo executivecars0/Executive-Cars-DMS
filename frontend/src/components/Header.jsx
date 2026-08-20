@@ -42,23 +42,23 @@ const { user, isAdmin, logout } = useAuth();
   });
 
   return (
-    <header className="min-h-20 border-b border-white/5 bg-[#051424]/90 backdrop-blur-xl px-4 sm:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 sticky top-0 z-30">
+    <header className="min-h-20 border-b border-white/5 bg-[#09090b]/90 backdrop-blur-xl px-4 sm:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 sticky top-0 z-30">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           {/* Hamburger Menu Toggle Button for Mobile */}
           <button
             onClick={onToggleMobileMenu}
-            className="lg:hidden p-2 rounded-xl bg-slate-900 border border-white/10 text-cyan-400 hover:bg-slate-800 transition-colors"
+            className="lg:hidden p-2 rounded-xl bg-slate-900 border border-white/10 text-[#c5a059] hover:bg-slate-800 transition-colors"
             title="Toggle Menu"
           >
             <Menu className="w-5 h-5" />
           </button>
 
           <div className="flex items-center space-x-3">
-            <img src="/logo.png" alt="AL ASR Logo" className="w-16 h-16 object-contain filter drop-shadow-lg" />
+            <img src="/logo.png" alt="Executive Cars Logo" className="w-14 h-14 object-contain filter drop-shadow-lg" />
             <div>
               <h2 className="text-lg sm:text-xl font-extrabold text-white tracking-tight">{titles[currentTab] || 'Dashboard'}</h2>
-              <p className="text-[11px] font-mono text-slate-400 mt-0.5">{currentDate} • AL ASR Motors Hub</p>
+              <p className="text-[11px] font-mono text-slate-400 mt-0.5">{currentDate} • Executive Cars Hub</p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const { user, isAdmin, logout } = useAuth();
             placeholder="Search seller, buyer, car..."
             value={localSearch}
             onChange={(e) => setLocalSearch(e.target.value)}
-            className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-mono"
+            className="w-full bg-slate-900/90 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059] transition-all font-mono"
           />
         </div>
 
@@ -83,7 +83,7 @@ const { user, isAdmin, logout } = useAuth();
             {(currentTab === 'all_sellers' || currentTab === 'my_sellers' || currentTab === 'sellers' || currentTab === 'dashboard') && (
               <button
                 onClick={() => onOpenModal('seller')}
-                className="px-3 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition-all flex items-center space-x-1.5"
+                className="px-3 py-2 bg-gradient-to-r from-[#c5a059] to-[#9a7a47] hover:from-[#dfc18b] hover:to-[#c5a059] text-black font-bold rounded-xl text-xs shadow-lg shadow-[#c5a059]/20 transition-all flex items-center space-x-1.5"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Seller</span>
@@ -95,7 +95,7 @@ const { user, isAdmin, logout } = useAuth();
                 onClick={() => onOpenModal('buyer')}
                 className="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-white/10 rounded-xl text-xs transition-all flex items-center space-x-1.5"
               >
-                <UserPlus className="w-3.5 h-3.5 text-cyan-400" />
+                <UserPlus className="w-3.5 h-3.5 text-[#c5a059]" />
                 <span>Add Buyer</span>
               </button>
             )}

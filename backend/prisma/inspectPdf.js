@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { PDFParse } = require('pdf-parse');
 
-const pdfPath = path.join(__dirname, '..', '..', 'AL ASR Motors_ Inventory Management Sheet - Daily Buyer.pdf');
+const pdfPath = path.join(__dirname, '..', '..', 'Executive Cars_ Inventory Management Sheet - Daily Buyer.pdf');
 
 async function inspect() {
   try {
